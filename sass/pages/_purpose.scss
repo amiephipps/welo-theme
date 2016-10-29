@@ -1,0 +1,120 @@
+.purpose {
+	.section1 {
+		background: url( #{"{{'purpose-section1.jpg' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
+		height: 780px;
+
+		// &::after {
+		// 	content: '';
+		// 	opacity: 0.5;
+		// 	background: $yellow;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	z-index: -1;
+		// }	
+
+		h4 {
+			@include fontSize(82);
+			margin: {
+				bottom: 10%;
+			}
+			white-space: nowrap;
+		}
+
+		p {
+			@include fontSize(24);
+			color: $pink;
+			letter-spacing: -0.33px;
+			line-height: 39px;
+		}
+
+		&Content {
+			width: 45%;
+		}
+
+		@include bp(768) {
+			height: 700px;
+
+			h4 {
+				@include fontSize(62.5);
+			}
+
+			p {
+				@incldue fontSize(22);
+			}
+		}
+
+		@include bp(580) {
+			height: 625px;
+
+			h4 {
+				@include fontSize(44);
+			}		
+
+			p {
+				@include fontSize(18);
+			}
+		}
+	}
+
+	.section2 {
+
+		h4 {
+			@extend .uppercase;
+			color: $purple;
+			text-align: right;
+			margin-top: -63px;
+		}
+
+		@include bp(768) {
+
+			h4 {
+				margin-top: -55px;
+			}
+		}
+
+		@include bp(580) {
+
+			h4 {
+				margin-top: -47px;
+			}		
+		}
+	}
+
+	.founders {
+		@extend .flexParent;
+		@extend .justifyContentSpaceBetween;
+		margin: {
+			top: 7%;
+			bottom: 7%;
+		}
+	}
+
+	.founderContainer {
+		width: 27%;
+
+		p:last-of-type {
+			color: $darkGrey;
+			letter-spacing: -0.25px;
+			line-height: 32px;
+		}
+	}
+
+	.founderName {
+		@include fontSize(34);
+		font-family: $primaryHeadingFont, sans-serif;
+		color: $pink;
+		position: absolute;
+	   top: 100px;
+	   word-spacing: 999rem;
+	   margin: 0;
+		line-height: 0.9;
+
+	   @include bp(768) {
+	   	word-spacing: unset;
+	   }
+	}
+}

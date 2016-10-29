@@ -1,0 +1,39 @@
+@import "headings";
+@import "lists";
+
+/*====================================
+=            # Typography           =
+====================================*/
+
+html {
+	font-size: 62.5%;
+	line-height: 1.2;
+	-webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea {
+	@include bodyFont;
+	color: $primaryText;
+}
+
+p {
+	margin-bottom: 1.5em;
+	@include fontSize(18);
+}
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+	&:focus,
+	&:active,
+	&:hover {
+		color: $hoverColor;
+		transition: 0.5s all;
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+/*=====  End of Typography  ======*/

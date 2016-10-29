@@ -1,0 +1,79 @@
+<div class="homepage">
+
+  <section class="section1">
+    <div class="wrapper flexParent justifyContentFlexEnd alignItemsFlexEnd">
+      <h2>Be<br/>what<br/>you<br/>love.</h2>
+    </div>
+  </section>
+
+  <section class="section2 relative">
+    <div class="wrapper">
+
+      <div class="flexParent justifyContentSpaceBetween">
+
+        <div class="weWantedToMakeContainer weWantedToMakeContainer-section2">
+
+          <h4 class="weWantedToMake">We wanted to make a <b class="superJuice">super juice</b></h4>
+
+        </div>
+        
+
+        <div class="soWeDidContainer">
+
+          <div class="soWeDid soWeDid-section2">
+            <h5><b>so we</b></h5>
+            <h3>did</h3>
+          </div>
+
+          <a href="#"><div class="learnAboutProbiotics learnAboutProbiotics-section2 flexParent justifyContentSpaceBetween alignItemsCenter">
+            <p>Learn about<br/>our probiotics.</p>
+            {{ 'rightArrow.png' | asset_url | img_tag }}
+          </div></a>
+
+        </div>
+        
+        {{ '2-products.png' | asset_url | img_tag: 'photo of products', 'absolute products2' }}
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section3">
+    <div class="wrapper">
+
+      <div class="flexParent justifyContentSpaceBetween">
+
+        <div class="weWantedToMakeContainer weWantedToMakeContainer-section3">
+
+          <h4 class="weWantedToMake">We wanted to make a</h4>
+          <h1>big</h1>
+          <h5 class="difference">difference</h5>
+
+        </div>
+        
+
+        <div class="soWeDidContainer">
+
+          <div class="soWeDid soWeDid-section3">
+            <h5><b>so we</b></h5>
+            <h3>did</h3>
+          </div>
+
+          <a href=""><div class="learnAboutProbiotics learnAboutProbiotics-section3 flexParent justifyContentSpaceBetween alignItemsCenter">
+            <p>Learn about<br/>our probiotics.</p>
+            {{ 'purpleRightArrow.png' | asset_url | img_tag }}
+          </div></a>
+
+        </div>
+
+        <div class="givingBackImgContainer absolute">
+          {{ 'welogivingback.png' | asset_url | img_tag: 'photo of children holding a Welo sign' }}
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>

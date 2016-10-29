@@ -1,0 +1,36 @@
+/*====================================
+=            # Base           =
+====================================*/
+
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+/* Images & Alignment */
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.alignright {
+  float: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
+img {
+	max-width: 100%;
+	height:auto;
+}

@@ -1,0 +1,92 @@
+h1, h2, h3, h4, h5, h6 {
+	@include headingFont; 
+	letter-spacing: 1.64px;
+	line-height: 0.85;
+	margin: 0;
+	color: $white;
+}
+
+h1 {
+	@include fontSize(160);
+	font-family: 'IntroRust-Base', sans-serif;
+
+	@include bp(768) {
+		@include fontSize(108);
+	}
+
+	@include bp(580) {
+		@include fontSize(73);
+	}
+}
+
+h2 {
+	@include fontSize(146);
+	font-family: 'IntroRust-Base', sans-serif;
+
+	@include bp(768) {
+		@include fontSize(87);
+	}
+
+	@include bp(580) {
+		@include fontSize(63);
+	}
+}
+
+h3{
+	@include fontSize(124);
+
+	@include bp(768) {
+		@include fontSize(92);
+	}
+
+	@include bp(580) {
+		@include fontSize(50);
+	}
+}
+
+h4 {
+	@include fontSize(90);
+
+	@include bp(768) {
+		@include fontSize(69);
+	}
+
+	@include bp(580) {
+		@include fontSize(50);
+	}
+}
+
+h5 {
+	@include fontSize(74);
+
+	@include bp(768) {
+		@include fontSize(58);
+	}
+
+	@include bp(580) {
+		@include fontSize(44);
+	}
+}
+
+h6 {
+	@include fontSize(24);
+
+	@include bp(768) {
+		@include fontSize(20);
+	}
+
+	// @include bp(580) {
+	// 	@include fontSize(15);
+	// }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	& a {
+		color:$linkColor;
+	}
+}

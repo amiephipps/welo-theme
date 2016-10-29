@@ -1,0 +1,65 @@
+// *
+// * Typography Mixins
+// *
+
+//calculate fontsize in rem - fallback to px
+@mixin fontSize($fontSize) {
+	font-size: $fontSize * 1px;
+	font-size: ($fontSize / 10) * 1rem;
+}
+
+@mixin lineHeight($size) {
+  line-height: $size; //Fallback in px if browser doesn't support rem
+  line-height: ($size / 10) * 1rem;
+}
+
+// heading font family
+// ---------------
+@mixin headingFont {
+	font:{
+	  family: $primaryHeadingFont;
+	  style: normal;
+	  weight: 400;
+	  }
+}
+
+// body font family
+// ---------------
+@mixin bodyFont {
+	font:{
+	  family: $bodyFont;
+	  style: normal;
+	  weight: 400;
+	  }
+}
+
+//================= END OF TYPOGRAPHY MIXINS
+
+
+
+// *
+// * Breakpoint Mixins
+// *
+
+// Breakpoints for desktop first approach ================
+
+@mixin bp($point) {
+
+  $bp1200:      "(max-width: 1200px)"; 
+  $bp1024:      "(max-width: 1024px)"; 
+  $bp768:       "(max-width: 768px)"; 
+  $bp480:       "(max-width: 580px)"; 
+  
+  @if $point == 1200 {
+    @media #{$bp1200} { @content; }
+  }
+  @else if $point == 1024 {
+    @media #{$bp10124} { @content; }
+  }
+  @else if $point == 768 {
+    @media #{$bp768}  { @content; }
+  }   
+  @else if $point == 580 {
+    @media #{$bp480}  { @content; }
+  }
+}

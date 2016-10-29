@@ -1,0 +1,22 @@
+@import "base/base";
+@import "typography/typography";
+@import "navigation/navigation";
+@import "layout";
+@import "pages/pages";
+
+/* IE8 does not support media queries */
+.lt-ie9 .show-on-medium, .lt-ie9 .show-on-small { display: none; }
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/ 
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* Utility classes: Hidden, float left, float right, etc. */
+.hidden { display: none; }
+.centered { text-align: center; }
+.clear { clear: both; }
+.clear-after { *zoom: 1; }
+.clear-after:after { content: ''; display: table; clear: both; }
+
+

@@ -1,0 +1,121 @@
+.givingBack {
+
+	.section1 {
+		background: url( #{"{{ 'givingback-section1.jpg' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
+		height: 710px;
+
+		div {
+			@extend .flexParent;
+			@extend .justifyContentFlexEnd;
+			@extend .alignItemsFlexEnd;
+			height: 100%;
+		}
+
+		p {
+			@extend .absolute;
+			@include fontSize(40);
+			font-family: $bodyFontBold;
+			margin: 0;
+			bottom: 225px;
+			right: 150px;
+			padding: 10px 15px;
+			background: $mintGreen;
+		}
+
+		h2 {
+			white-space: nowrap;
+		}
+
+		@include bp(768) {
+			height: 480px;
+
+			div {
+				height: 100%;
+			}
+
+			p {
+				@include fontSize(30);
+				bottom: 135px;
+				right: 55px;
+			}
+		}
+
+		@include bp(580) {
+			height: 480px;
+
+			div {
+				height: 100%;
+			}
+
+			p {
+				@include fontSize(22);
+				bottom: 98px;
+				right: 45px;
+				padding: 7px 10px;
+			}
+		}
+	}
+
+	.section2 {
+		background: $purple;
+
+		> div {
+			@extend .flexParent;
+			@extend .justifyContentSpaceAround;
+			// @extend .alignItemsCenter;
+		}
+
+		&Container {
+			width: 41%;
+		}
+
+		h6 {
+			font-family: $bodyFontBold, sans-serif;
+			color: $mintGreen;
+			letter-spacing: -0.33px;
+			line-height: 39px;
+		}
+
+		p {
+			letter-spacing: -0.25px;
+			line-height: 32px;
+		}
+
+		.givingBackImgContainer {
+
+			img {
+				@extend .relative;
+				transform: rotate(9deg);
+				top: -90px;
+				left: -150px;
+			}
+		}
+
+		@include bp(768) {
+
+			&Container {
+				width: 100%;
+			}
+
+			.givingBackImgContainer {
+				// height: 400px;
+
+				img {
+					top: -50px;
+				}
+			}
+		}
+
+		@include bp(580) {
+
+			.givingBackImgContainer {
+				// height: 400px;
+
+				img {
+					left: 50px;
+				}
+			}
+		}
+	}
+}

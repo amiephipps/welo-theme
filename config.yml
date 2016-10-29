@@ -1,0 +1,12 @@
+---
+:api_key: 1f8e41dcff0dcf886eaea17b183f8960
+:password: 0c3f6775f2ed0b0214d574a547bca2cd
+:store: welo-probiotics.myshopify.com
+:theme_id: 
+:whitelist_files:
+- layout/
+- assets/
+- config/
+- snippets/
+- templates/
+- locales/

@@ -1,0 +1,66 @@
+/*================================
+=            # Layout            =
+================================*/
+
+body {
+	background: $backgroundcolor;
+	margin: 0;
+	padding: 0;
+}
+ 
+.wrapper { 
+	max-width: $mainContent;
+	margin: 0 auto;
+	padding: 25px 5%;
+
+	@include bp(768) {
+		padding: 25px 4%;
+	}
+}
+
+.flexParent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexColumn {
+	flex-direction: column;
+}
+
+.justifyContent {
+	&FlexEnd {
+		justify-content: flex-end;
+	}
+
+	&Center {
+		justify-content: center;
+	}
+
+	&SpaceBetween {
+		justify-content: space-between;
+	}
+
+	&SpaceAround {
+		justify-content: space-around;
+	}
+}
+
+.alignItems {
+	&Center {
+		align-items: center;
+	}
+
+	&FlexEnd {
+		align-items: flex-end;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/*=====  End of Layout  ======*/

@@ -1,0 +1,34 @@
+/*================================
+=            ## Footer          =
+================================*/
+
+footer {
+	background: $pink;
+	height: 140px;
+	padding-top: 28px;
+
+	.socialLink {
+		padding-right: 15px;
+
+		img {
+			height: 35px;
+			width: 35px;
+		}
+
+		span {
+			@include fontSize(18);
+			color: $white;
+		}
+
+		a:hover {
+			color: $darkGrey;
+			transition: 0.5s all;
+		}
+	}
+
+	@include bp(580) {
+		display: none;
+	}	
+}
+
+/*=====  End of Footer  ======*/
