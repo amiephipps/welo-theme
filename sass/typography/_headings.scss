@@ -21,14 +21,17 @@ h1 {
 
 h2 {
 	@include fontSize(146);
+	line-height: 122px;
 	font-family: 'IntroRust-Base', sans-serif;
 
 	@include bp(768) {
 		@include fontSize(87);
+		line-height: 73px;
 	}
 
 	@include bp(580) {
 		@include fontSize(63);
+		line-height: 52px;
 	}
 }
 
@@ -46,13 +49,16 @@ h3{
 
 h4 {
 	@include fontSize(90);
+	line-height: 79px;
 
 	@include bp(768) {
 		@include fontSize(69);
+		line-height: 53px;
 	}
 
 	@include bp(580) {
 		@include fontSize(50);
+		line-height: 36px;
 	}
 }
 
@@ -75,9 +81,9 @@ h6 {
 		@include fontSize(20);
 	}
 
-	// @include bp(580) {
-	// 	@include fontSize(15);
-	// }
+	@include bp(580) {
+		@include fontSize(15);
+	}
 }
 
 h1,

@@ -18,10 +18,13 @@
 
 		h4 {
 			@include fontSize(82);
+			font-family: $bodyFontBold;
 			margin: {
 				bottom: 10%;
 			}
 			white-space: nowrap;
+			letter-spacing: -1.21px;
+			line-height: 82.8px;
 		}
 
 		p {
@@ -32,7 +35,7 @@
 		}
 
 		&Content {
-			width: 45%;
+			width: 50%;
 		}
 
 		@include bp(768) {
@@ -40,10 +43,16 @@
 
 			h4 {
 				@include fontSize(62.5);
+				line-height: 67px;
 			}
 
 			p {
 				@incldue fontSize(22);
+				line-height: 36px;
+			}
+
+			&Content {
+				width: 65%;
 			}
 		}
 
@@ -52,10 +61,16 @@
 
 			h4 {
 				@include fontSize(44);
+				line-height: 44px;
 			}		
 
 			p {
 				@include fontSize(18);
+				line-height: 29px;
+			}
+
+			&Content {
+				width: 100%;
 			}
 		}
 	}
@@ -91,9 +106,14 @@
 			top: 7%;
 			bottom: 7%;
 		}
+
+		@include bp(768) {
+			flex-direction: column;
+		}
 	}
 
 	.founderContainer {
+		@extend .relative;
 		width: 27%;
 
 		p:last-of-type {
@@ -101,10 +121,52 @@
 			letter-spacing: -0.25px;
 			line-height: 32px;
 		}
+
+		@include bp(768) {
+			width: 70%;
+			margin-top: -40px;
+
+			&:first-of-type,
+			&:nth-of-type(3) {
+
+				.founderName {
+					right: 0;
+				}
+
+				.founderImage {
+					text-align: left;
+				}
+			}
+		}
+
+		@include bp(580) {
+			width: 100%;
+			margin-top: initial;
+
+			&:first-of-type,
+			&:nth-of-type(3) {
+
+				.founderImage {
+					margin-left: -50px;
+				}
+			}
+
+			&:nth-of-type(2) {
+
+				.founderImage {
+					margin-right: -50px;
+				}
+			}
+		}
+	}
+
+	.founderImage {
+		text-align: right;
 	}
 
 	.founderName {
 		@include fontSize(34);
+		@extend .uppercase;
 		font-family: $primaryHeadingFont, sans-serif;
 		color: $pink;
 		position: absolute;
@@ -115,6 +177,8 @@
 
 	   @include bp(768) {
 	   	word-spacing: unset;
+	   	white-space: nowrap;
+	   	top: 150px;
 	   }
 	}
 }

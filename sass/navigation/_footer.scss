@@ -1,11 +1,12 @@
-/*================================
-=            ## Footer          =
-================================*/
-
 footer {
 	background: $pink;
 	height: 140px;
 	padding-top: 28px;
+
+	ul {
+		@extend .flexParent;
+		@extend .alignItemsCenter;
+	}
 
 	.socialLink {
 		padding-right: 15px;
@@ -28,7 +29,24 @@ footer {
 
 	@include bp(580) {
 		display: none;
+		z-index: 999;
+		background: none;
+		padding: 0;
+		position: absolute;
+		bottom: 0;
+
+		.socialLink {
+			padding-right: 5px;
+		}
+
+		li:last-of-type {
+			margin-top: 10px;
+		}
+
+		ul {
+			display: block;
+			padding-left: 4%;
+		}
+
 	}	
 }
-
-/*=====  End of Footer  ======*/

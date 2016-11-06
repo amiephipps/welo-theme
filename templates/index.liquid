@@ -6,10 +6,10 @@
     </div>
   </section>
 
-  <section class="section2 relative">
+  <section class="section2">
     <div class="wrapper">
 
-      <div class="flexParent justifyContentSpaceBetween">
+      <div class="sectionContent sectionContent2">
 
         <div class="weWantedToMakeContainer weWantedToMakeContainer-section2">
 
@@ -18,21 +18,21 @@
         </div>
         
 
-        <div class="soWeDidContainer">
+        <div class="soWeDidContainer soWeDidContainer-section2">
 
           <div class="soWeDid soWeDid-section2">
             <h5><b>so we</b></h5>
             <h3>did</h3>
           </div>
 
-          <a href="#"><div class="learnAboutProbiotics learnAboutProbiotics-section2 flexParent justifyContentSpaceBetween alignItemsCenter">
+          <a class="learnAboutProbioticsLink" href="#"><div class="learnAboutProbiotics learnAboutProbiotics-section2">
             <p>Learn about<br/>our probiotics.</p>
             {{ 'rightArrow.png' | asset_url | img_tag }}
           </div></a>
 
         </div>
         
-        {{ '2-products.png' | asset_url | img_tag: 'photo of products', 'absolute products2' }}
+        {{ '2-products.png' | asset_url | img_tag: 'photo of products', 'products2' }}
 
       </div>
 
@@ -42,7 +42,7 @@
   <section class="section3">
     <div class="wrapper">
 
-      <div class="flexParent justifyContentSpaceBetween">
+      <div class="sectionContent sectionContent3">
 
         <div class="weWantedToMakeContainer weWantedToMakeContainer-section3">
 
@@ -53,21 +53,21 @@
         </div>
         
 
-        <div class="soWeDidContainer">
+        <div class="soWeDidContainer soWeDidContainer-section3">
 
           <div class="soWeDid soWeDid-section3">
             <h5><b>so we</b></h5>
             <h3>did</h3>
           </div>
 
-          <a href=""><div class="learnAboutProbiotics learnAboutProbiotics-section3 flexParent justifyContentSpaceBetween alignItemsCenter">
+          <a class="learnAboutProbioticsLink" href=""><div class="learnAboutProbiotics learnAboutProbiotics-section3">
             <p>Learn about<br/>our probiotics.</p>
             {{ 'purpleRightArrow.png' | asset_url | img_tag }}
           </div></a>
 
         </div>
 
-        <div class="givingBackImgContainer absolute">
+        <div class="givingBackImgContainer">
           {{ 'welogivingback.png' | asset_url | img_tag: 'photo of children holding a Welo sign' }}
         </div>
 

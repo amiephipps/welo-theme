@@ -1,3 +1,199 @@
 .products {
-	
+
+	p {
+		@include fontSize(10);
+		font-family: $bodyFontBold;
+	}
+
+	.section1 {
+		background: url( #{"{{'products-section1.jpg' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
+		height: 650px;
+
+		div {
+			@extend .flexParent;
+			@extend .alignItemsCenter;
+			@extend .relative;
+			height: 100%;
+		}
+
+		@include bp(768) {
+			height: 440px;
+		}
+
+		@include bp(580) {
+			height: 360px;
+		}
+
+		.learnAboutProbioticsLink {
+			@extend .absolute;
+			bottom: 100px;
+			left: 9%;
+		}
+
+		.learnAboutProbiotics {
+			@extend .flexParent;
+			@extend .justifyContentSpaceBetween;
+			@extend .alignItemsCenter;
+			background: $pink;
+			width: 225px;
+			padding: 10px;
+			margin: {
+				top: 30px;
+			}
+
+			p {
+				margin: 0;
+				color: $white;
+				font-family: $bodyFontBold, sans-serif;
+			}
+		}
+	}
+
+	.section2 {
+		@extend .relative;
+		background: $purple;
+	}
+
+	.section2-1 {
+		position: absolute;
+		width: 70%;
+		right: 0;
+		top: -130px;
+	}
+
+	.section2-2 {
+		width: 30%;
+		margin-top: 65px;
+
+		p {
+			@include fontSize(24);
+			font-family: $bodyFontBold;
+			color: $mintGreen;
+			margin: 0 0 5px;
+
+			&:not(:last-of-type) {
+				border-bottom: 1px solid $white;
+			}
+		}
+	}
+
+	.section2-3 {
+		margin: 110px 0px 70px;
+	}
+
+	.section2-4 {
+		p {
+			color: $lightGrey;
+			text-align: center;
+		}
+	}
+
+	.section3 {
+		background: $coral;
+		padding: 5% 0;
+
+		h2 {
+			color: $yellow;
+		}
+	}
+
+	.section3Content {
+		@extend .flexParent;
+		@extend .alignItemsCenter;
+		@extend .justifyContentSpaceBetween;
+		flex-wrap: none;
+
+		// @media all and (max-width: 1335px) {
+		// 	// margin-left: 20%;
+
+		// 	.section3-2 {
+		// 		margin-top: 5%;
+		// 	}
+		// }
+	}
+
+	.section3-1 {
+
+	   .section3-1-mobile {
+	   	display: none;
+	   }
+
+	   @include bp(768) {
+
+	   	.section3-1-mobile {
+	   		display: block
+	   	}
+
+	   	.section3-1-desktop {
+	   		display: none;
+	   	}
+	   }
+	}
+
+	.section3-2 {
+		@extend .flexParent;
+		@extend .justifyContentSpaceBetween;
+
+	}
+
+	.section3-2-1 {
+		width: 228px;
+		height: 458px;
+
+		// img {
+		// 	max-width: initial;
+
+			@include bp(580) {
+				height: 344px;
+				width: 159px;
+			}
+		// }
+	}
+
+	.section3-2-2 {
+		@extend .relative;
+		width: 500px;
+		margin-top: 20px;
+		margin-left: 20px;
+
+		h6 {
+			font-family: $bodyFontBold;
+			text-transform: none;
+			@include fontSize(23);
+		}
+
+		h6:nth-of-type(2),
+		h6:nth-of-type(3) {
+			margin-top: 55px;
+		}
+
+		h6:nth-of-type(4) {
+			margin-top: 40px;
+		}
+
+		p {
+			@extend .absolute;
+			bottom: -50px;
+
+			a {
+				color: $white;
+			}
+		}
+	}
+
+	.section4 {
+		background: $lightGreen;
+
+		h5 {
+			color: $purple;
+			font-family: $bodyFontBold;
+		}
+
+		h6 {
+			color: $pink;
+			font-family: $bodyFont;
+			text-transform: none;
+		}
+	}
 }

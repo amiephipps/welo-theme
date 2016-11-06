@@ -1,16 +1,78 @@
-{% comment %}
-Re-use the 'rte' class wherever you output content that was added by a merchant using
-the Rich Text Editor ( 'rte' stands for rich text editor ).
-Style all HTML elements in that content the same way across the board.
-Use the 'rte' class in your CSS to help maintain that consistency.
-Example: the h2 element should have the same size and color in:
-- product descriptions
-- collection descriptions
-- 'page' pages' content
-- blog post
-{% endcomment %}
+<div class="products">
 
-<h1>{{ page.title }}</h1>
-<div class="rte">
-  {{ page.content }}
+	<section class="section1">
+		<div class="wrapper">
+
+			<h2>Packed<br/>With<br/>Goodness.</h2>
+			<a class="learnAboutProbioticsLink" href="#">
+				<div class="learnAboutProbiotics learnAboutProbiotics-section2">
+					<p>Learn about<br/>our probiotics.</p>
+					{{ 'rightArrow.png' | asset_url | img_tag }}
+				</div>
+			</a>
+
+		</div>
+	</section>
+
+	<section class="section2">
+		<div class="wrapper">
+
+			<div class="section2-1">
+				{{ 'All-Products_Trans.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'allProducts' }}
+			</div>
+
+			<div class="section2-2">
+				<p>2 billion vegan probiotics</p>
+				<p>cold pressed fruits and veggies</p>
+				<p>organic</p>
+				<p>vegan</p>
+				<p>low sugar</p>
+			</div>
+			<div class="section2-3">
+				{{ 'yogurts.png' | asset_url | img_tag: 'photo of all probiotic drinks' }}
+			</div>
+			<div class="section2-4">
+				<p>In an independent lab study of a simulated gastric environment with a pH of 2.0 for two hours, GanedenBC30 cells were delivered 10X more effectively than common yogurt cultures.</p>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section3">
+		<div class="wrapper">
+
+			<div class="section3Content">
+				<div class="section3-1">
+					<h2 class="section3-1-desktop">We<br/>Love<br/>Your<br/>Guts.</h2>
+					<h2 class="section3-1-mobile">We Love Your Guts.</h2>
+				</div>
+				
+				<div class="section3-2">
+					<div class="section3-2-1">
+						{{ 'digestiveSystem.png' | asset_url | img_tag }}
+					</div>
+					
+					<div class="section3-2-3">
+						<h6>“The Second Brain”: Our digestive system is the second largest part of our neurological system, most illnesses originate in the gut.</h6>
+						<h6>Appetite: Probiotics are the fastest growing functional food on the market with a growth rate of 7% year over year. †</h6>
+						<h6>Need: More than 20 million Canadians suffer from digestive disorders every year. ††</h6>
+						<h6>Reality: 80 percent of your entire immune system is located in your digestive tract.</h6>
+					
+						<p>† Euromonitor  †† <a href="http://www.cdhf.ca/en/statistics" target="_blank">http://www.cdhf.ca/en/statistics</a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section4">
+		<div class="wrapper">
+			
+			<h5>Good things <br/>come to those <br/>who wait.</h5>
+			<h6>We’re still working on building our store.  Please check back in the near future or add your email to the mailing list below and we’ll let you know when we’re up and running.</h6>
+
+		</div>
+	</section>
+
 </div>
