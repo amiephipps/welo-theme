@@ -50,17 +50,16 @@
     {% endfor %}
   </ul>
 
-  <div class="mobileNavIcon">
-    <span id="purpose"></span>
-    <span id="products"></span>
-    <span id="givingBack"></span>
-    <span></span>
+  <div class="mobileNavIconContainer">
+    <div class="mobileNavIcon">
+      <span id="purpose" class="{% if page.template_suffix == 'purpose' %} pink {% endif %}"></span>
+      <span id="products" class="{% if page.template_suffix == 'products' %} pink {% endif %}"></span>
+      <span id="products" class="{% if page.template_suffix == 'products' %} pink {% endif %}"></span>
+      <span id="givingBack" class="{% if page.template_suffix == 'givingback' %} pink {% endif %}"></span>
+    </div>
   </div>
 
   <div class="mobileNav">
-    <div class="close">
-      <div class="wrapper fa fa-times fa-3x"></div>
-    </div>
     <div class="nav">
       <ul class="wrapper">
         {% for link in linklists.main-menu.links %}

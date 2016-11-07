@@ -31,10 +31,15 @@ var loadScript = function(url, callback){
 
 /* This is my app's JavaScript */
 var weloApp = function($){
+
 	$('.mobileNavIcon').click(function(){
-		// $(this).toggleClass('open');
-		// $('.mobilNav').toggleClass('mobileOpen');
+		$(this).toggleClass('open');
+		$('.mobileNav, footer').toggleClass('mobileOpen');
+		$('body').toggleClass('hideOverflow');
+		$('.mobileNavIconContainer').toggleClass('mobileNavDisplay');
+		$('#products, #givingBack').toggleClass('whiteMenu');
 	});
+
 };
 
 /* If jQuery has not yet been loaded or if it has but it's too old for our needs, we will load jQuery from the Google CDN, and when it's fully loaded, we will run our app's JavaScript. Set your own limits here, the sample's code below uses 1.7 as the minimum version we are ready to use, and if the jQuery is older, we load 1.9. */

@@ -3,10 +3,10 @@
 	<section class="section1">
 		<div class="wrapper">
 
-			<h2>Packed<br/>With<br/>Goodness.</h2>
-			<a class="learnAboutProbioticsLink" href="#">
-				<div class="learnAboutProbiotics learnAboutProbiotics-section2">
-					<p>Learn about<br/>our probiotics.</p>
+			<h3>Packed<br/>With<br/>Goodness.</h3>
+			<a class="meetTheProbioticsLink" href="#">
+				<div class="meetTheProbiotics">
+					<p>Meet the<br/>probiotics.</p>
 					{{ 'rightArrow.png' | asset_url | img_tag }}
 				</div>
 			</a>
@@ -19,6 +19,7 @@
 
 			<div class="section2-1">
 				{{ 'All-Products_Trans.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'allProducts' }}
+				{{ 'allProductsMobile.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'allProductsMobile' }}
 			</div>
 
 			<div class="section2-2">
@@ -29,7 +30,8 @@
 				<p>low sugar</p>
 			</div>
 			<div class="section2-3">
-				{{ 'yogurts.png' | asset_url | img_tag: 'photo of all probiotic drinks' }}
+				{{ 'yogurts.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'section2-3-desktop' }}
+				{{ 'yogurtsMobile.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'section2-3-mobile' }}
 			</div>
 			<div class="section2-4">
 				<p>In an independent lab study of a simulated gastric environment with a pH of 2.0 for two hours, GanedenBC30 cells were delivered 10X more effectively than common yogurt cultures.</p>
@@ -43,16 +45,17 @@
 
 			<div class="section3Content">
 				<div class="section3-1">
-					<h2 class="section3-1-desktop">We<br/>Love<br/>Your<br/>Guts.</h2>
-					<h2 class="section3-1-mobile">We Love Your Guts.</h2>
+					<h3 class="section3-1-desktop">We<br/>Love<br/>Your<br/>Guts.</h3>
+					<h3 class="section3-1-mobile">We Love Your Guts.</h3>
 				</div>
 				
 				<div class="section3-2">
 					<div class="section3-2-1">
-						{{ 'digestiveSystem.png' | asset_url | img_tag }}
+						{{ 'digestiveSystem.png' | asset_url | img_tag: 'digestive system', 'section3-2-1-desktop' }}
+						{{ 'digestiveSystemMobile.png' | asset_url | img_tag: 'digestive system', 'section3-2-1-mobile' }}
 					</div>
 					
-					<div class="section3-2-3">
+					<div class="section3-2-2">
 						<h6>“The Second Brain”: Our digestive system is the second largest part of our neurological system, most illnesses originate in the gut.</h6>
 						<h6>Appetite: Probiotics are the fastest growing functional food on the market with a growth rate of 7% year over year. †</h6>
 						<h6>Need: More than 20 million Canadians suffer from digestive disorders every year. ††</h6>
@@ -68,9 +71,40 @@
 
 	<section class="section4">
 		<div class="wrapper">
+				
+			<div class="section4Content">
+				<h5>Good things
+				<br/>come to those
+				<br/>who wait.</h5>
+				<h6>We’re still working on building our store. 
+				Please check back in the near future or add your email to the mailing list below and we’ll let you know when we’re up and running.</h6>
+			</div>
+
+		</div>
+
+		<div class="notifyMe">
+			<h6>Notify Me:</h6>
+			<input type="text" placeholder="Me email.">
+			{{ 'purpleRightArrow.png' | asset_url | img_tag: 'arrow pointing right', 'rightArrow'}}
+		</div>
+	</section>
+
+	<section class="section5">
+		<div class="wrapper">
 			
-			<h5>Good things <br/>come to those <br/>who wait.</h5>
-			<h6>We’re still working on building our store.  Please check back in the near future or add your email to the mailing list below and we’ll let you know when we’re up and running.</h6>
+		<div class="section5Content">
+
+			<div class="section5Headings">
+				<h4 class="section5-desktop">Right To<br/>The Gut.</h4>
+				<h6>Subscription ordering, coming soon.</h6>	
+			</div>
+
+			<div class="section5-img">
+				{{ 'BeetOrangeProducts.png' | asset_url | img_tag: 'image of 2 of the drinks', 'section5-imgDesktop' }}
+				{{ 'berryBeet.png' | asset_url | img_tag: 'image of 2 of the drinks', 'section5-imgTablet' }}
+				{{ 'Berry-Beet_TransCropped.png' | asset_url | img_tag: 'image of 2 of the drinks', 'section5-imgMobile' }}
+			</div>
+		</div>
 
 		</div>
 	</section>

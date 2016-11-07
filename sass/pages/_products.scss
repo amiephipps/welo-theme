@@ -25,13 +25,13 @@
 			height: 360px;
 		}
 
-		.learnAboutProbioticsLink {
+		.meetTheProbioticsLink {
 			@extend .absolute;
-			bottom: 100px;
+			bottom: 120px;
 			left: 9%;
 		}
 
-		.learnAboutProbiotics {
+		.meetTheProbiotics {
 			@extend .flexParent;
 			@extend .justifyContentSpaceBetween;
 			@extend .alignItemsCenter;
@@ -43,9 +43,45 @@
 			}
 
 			p {
+				@include fontSize(20);
 				margin: 0;
 				color: $white;
-				font-family: $bodyFontBold, sans-serif;
+				font-family: $bodyFontBlack, sans-serif;
+			}
+
+			img {
+				transform: rotate(90deg);
+			}
+		}
+
+		@include bp(768) {
+
+			.meetTheProbioticsLink {
+				bottom: 60px;
+			}
+
+			.meetTheProbiotics {
+				width: 170px;
+
+				p {
+					@include fontSize(15);
+				}
+			}
+		}
+
+		@include bp(580) {
+
+			.meetTheProbioticsLink {
+				bottom: 80px;
+				left: 13%;
+			}
+
+			.meetTheProbiotics {
+				width: 140px;
+
+				p {
+					@include fontSize(12);
+				}
 			}
 		}
 	}
@@ -53,67 +89,99 @@
 	.section2 {
 		@extend .relative;
 		background: $purple;
-	}
 
-	.section2-1 {
-		position: absolute;
-		width: 70%;
-		right: 0;
-		top: -130px;
-	}
+		.section2-1 {
+			position: absolute;
+			width: 70%;
+			right: 0;
+			top: -60px;
 
-	.section2-2 {
-		width: 30%;
-		margin-top: 65px;
+			.allProductsMobile {
+				display: none;
+			}
+		}
 
-		p {
-			@include fontSize(24);
-			font-family: $bodyFontBold;
-			color: $mintGreen;
-			margin: 0 0 5px;
+		.section2-2 {
+			width: 33%;
+			margin-top: 95px;
 
-			&:not(:last-of-type) {
-				border-bottom: 1px solid $white;
+			p {
+				@include fontSize(24);
+				font-family: $bodyFontBold;
+				color: $mintGreen;
+				margin: 0 0 5px;
+
+				&:not(:last-of-type) {
+					border-bottom: 1px solid $white;
+				}
+			}
+		}
+
+		.section2-3 {
+			margin: 120px 0px 70px;
+
+			&-mobile {
+				display: none;
+			}
+		}
+
+		.section2-4 {
+			p {
+				color: $lightGrey;
+				text-align: center;
+			}
+		}
+
+		@include bp(768) {
+
+			.section2-3 {
+
+				&-mobile {
+					display: block;
+				}
+
+				&-desktop {
+					display: none;
+				}
+			}
+		}
+
+		@include bp(580) {
+
+			.section2-1 {
+
+				.allProductsMobile {
+					display: block;
+				}
+
+				.allProducts {
+					display: none;
+				}
 			}
 		}
 	}
 
-	.section2-3 {
-		margin: 110px 0px 70px;
-	}
-
-	.section2-4 {
-		p {
-			color: $lightGrey;
-			text-align: center;
-		}
-	}
 
 	.section3 {
 		background: $coral;
 		padding: 5% 0;
-
-		h2 {
-			color: $yellow;
-		}
 	}
 
 	.section3Content {
 		@extend .flexParent;
 		@extend .alignItemsCenter;
 		@extend .justifyContentSpaceBetween;
-		flex-wrap: none;
-
-		// @media all and (max-width: 1335px) {
-		// 	// margin-left: 20%;
-
-		// 	.section3-2 {
-		// 		margin-top: 5%;
-		// 	}
-		// }
+		flex-wrap: nowrap;
 	}
 
 	.section3-1 {
+
+		h3 {
+			color: $yellow;
+			letter-spacing: -1.65px;
+			font-size: 9.7vw;
+			line-height: 7.8vw;
+		}
 
 	   .section3-1-mobile {
 	   	display: none;
@@ -133,39 +201,38 @@
 
 	.section3-2 {
 		@extend .flexParent;
-		@extend .justifyContentSpaceBetween;
+		flex-wrap: nowrap;
 
 	}
 
 	.section3-2-1 {
-		width: 228px;
-		height: 458px;
 
-		// img {
-		// 	max-width: initial;
+		&-mobile {
+			display: none;
+		}
 
-			@include bp(580) {
-				height: 344px;
-				width: 159px;
-			}
-		// }
+		img {
+			width: 228px;
+			height: 458px;
+		}
 	}
 
 	.section3-2-2 {
 		@extend .relative;
-		width: 500px;
+		max-width: 500px;
 		margin-top: 20px;
 		margin-left: 20px;
 
 		h6 {
 			font-family: $bodyFontBold;
 			text-transform: none;
-			@include fontSize(23);
+			font-size: 1.8vw;
+			text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
 		}
 
 		h6:nth-of-type(2),
 		h6:nth-of-type(3) {
-			margin-top: 55px;
+			margin-top: 60px;
 		}
 
 		h6:nth-of-type(4) {
@@ -180,20 +247,227 @@
 				color: $white;
 			}
 		}
+
+		@include bp(768) {
+
+			.section3-2-1 {
+
+				&-mobile {
+					display: block;
+				}
+
+				&-desktop {
+					display: none;
+				}
+			}
+		}
 	}
 
 	.section4 {
+		@extend .relative;
 		background: $lightGreen;
+
+		.section4Content {
+			padding: 10% 0 5%;
+			width: 45%;
+		}
 
 		h5 {
 			color: $purple;
 			font-family: $bodyFontBold;
+			margin-bottom: 10%;
+			letter-spacing: -1px;
+			line-height: 69px;
+			white-space: nowrap;
 		}
 
 		h6 {
 			color: $pink;
 			font-family: $bodyFont;
 			text-transform: none;
+			letter-spacing: -0.33px;
+			line-height: 39px;
+		}
+
+		.notifyMe {
+			@extend .relative;
+			z-index: 9;
+			bottom: -50px;
+			background: $purple;
+			padding: 40px;
+			width: 500px;
+			margin-left: 5%;
+
+
+			h6 {
+				font-family: $primaryHeadingFont;
+				letter-spacing: -0.37px;
+				line-height: 1;
+				text-transform: uppercase;
+				color: $white;
+			}
+
+			input {
+				@include fontSize(15);
+				width: 85%;
+				padding: 10px;
+				color: $purple;
+			}
+
+			.rightArrow {
+				position: relative;
+				right: 5px;
+				bottom: -17px;
+				padding: 10px;
+				width: 14%;
+				height: 45px;
+				background: $lightGreen;
+				cursor: pointer;
+			}
+
+			input[type="text"]:placeholder-shown,
+			input[type="text"]::-webkit-input-placeholder,
+			input[type="text"]::-moz-placeholder,
+			input[type="text"]:-ms-input-placeholder,
+			input[type="text"]:-moz-placeholder {
+				@include fontSize(15);
+				color: $purple;
+			}
+		}
+
+		@include bp(768) {
+			.section4Content {
+				width: 60%;
+			}
+
+			h5 {
+				letter-spacing: -0.81px;
+				line-height: 56px;
+			}
+
+			h6 {
+				letter-spacing: -0.31px;
+				line-height: 36px;
+			}
+
+			.notifyMe {
+				width: 390px;
+				padding: 20px;
+			}
+		}
+
+		@include bp(580) {
+			.section4Content {
+				width: 100%;
+			}
+
+			h5 {
+				letter-spacing: -0.62px;
+				line-height: 44px;
+			}
+
+			h6 {
+				letter-spacing: -0.25px;
+				line-height: 29px;
+			}
+
+			.notifyMe {
+				margin: 0;
+				padding: 10px 10px 45px;
+				width: 100%;
+			}
+
+			input[type=submit] {
+				right: 10px;
+				bottom: 45px;
+				padding: 12px;
+			}
+		}
+	}
+
+	.section5 {
+		@extend .relative;
+		background: $green;
+		height: 505px;
+
+		&Headings {
+			width: 51%;
+			margin-top: 14%; 
+		}
+
+		h4 {
+			color: $lightGreen;
+			margin-bottom: 5%;
+		}
+
+		h6 {
+			@include fontSize(30);
+			text-transform: none;
+			font-family: $bodyFontBold;
+			letter-spacing: 1.14px;
+		}
+
+		&-img {
+			@extend .absolute;
+			bottom: -3px;
+			right: 0;
+			max-width: 50%;
+		}
+
+		&-imgMobile,
+		&-imgTablet {
+			display: none;
+		}
+
+		@include bp(768) {
+			height: 410px;
+			
+			h6 {
+				@include fontSize(20);
+			}
+
+			&Headings {
+				width: 57%;
+			}
+
+			&-img {
+				bottom: 0px;
+				z-index: 10;
+			}
+
+			&-imgDesktop {
+				display: none;
+			}
+
+			&-imgTablet {
+				display: block;
+			}
+		}
+
+		@include bp(580) {
+			height: 410px;
+
+			h4 {
+				margin-bottom: 20%;
+			}
+
+			h6 {
+				@include fontSize(18);
+				letter-spacing: -0.25px;
+			}
+
+			&Headings {
+				margin-top: 20%;
+				width: 45%;
+			}
+			
+			&-imgTablet {
+				display: none;
+			}
+
+			&-imgMobile {
+				display: block;
+			}
 		}
 	}
 }
