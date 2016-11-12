@@ -5,7 +5,7 @@
 
 (function(window, $) {
   "use strict";
-
+  
   var counter = 0,
     $headCache = $('head'),
     oldBigText = window.BigText,

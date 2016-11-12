@@ -40,6 +40,11 @@ var weloApp = function($){
 		$('#products, #givingBack').toggleClass('whiteMenu');
 	});
 
+	var bt = BigText.noConflict(true);
+	   $.fn.bt = bt.jQueryMethod;
+
+	   $('#bigtext').bt();
+
 };
 
 /* If jQuery has not yet been loaded or if it has but it's too old for our needs, we will load jQuery from the Google CDN, and when it's fully loaded, we will run our app's JavaScript. Set your own limits here, the sample's code below uses 1.7 as the minimum version we are ready to use, and if the jQuery is older, we load 1.9. */
