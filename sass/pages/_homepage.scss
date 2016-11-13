@@ -1,7 +1,6 @@
 .homepage {
 	h1, h2, h3, h4, h5, h6 {
-		@extend .uppercase;
-		text-align: justify;
+		// text-align: justify;
 	}
 
 	.section1 {
@@ -24,10 +23,8 @@
 
 	.section2 {
 		@extend .relative;
-		// background: url( #{"{{'waterColorPaint.jpg' | asset_url }}"} ) center center no-repeat;
-		// background-size: cover;	
 		height: 520px;
-		background-color: $mintGreen;
+		background-color: $lightGrey;
 
 		.products2 {
 			@extend .absolute;
@@ -36,7 +33,34 @@
 			transform: translateX(-40%);
 
 			@include bp(768) {
-				width: 65%;
+				display: none;
+			}
+		}
+
+		.products2Tablet {
+			display: none;
+
+			@include bp(768) {
+				position: absolute;
+				display: block;
+				width: 56%;
+				bottom: 0;
+				right: 0;
+			}
+
+			@include bp(580) {
+				display: none;
+			}
+		}
+
+		.productsMobile {
+			display: none;
+
+			@include bp(580) {
+				position: absolute;
+				display: block;
+				top: -15px;
+				right: 0;
 			}
 		}
 
@@ -45,6 +69,11 @@
 
 			& > div {
 				height: 100%;
+			}
+
+			.sectionContent2 {
+				margin-top: 10%;
+				flex-direction: column;
 			}
 		}
 
@@ -56,19 +85,52 @@
 	.section3 {
 		position: relative;
 		background: $orange;
+		overflow: hidden;
 
 		.givingBackImgContainer {
 			@extend .absolute;
-			left: 50%;
+			left: 48%;
 			transform: translateX(-45%);
 		}
 
 		@include bp(768) {
 			height: 520px;
+
+			> div,
+			.sectionContent3 {
+				height: 100%;
+			}
+
+			.sectionContent3 {
+				justify-content: center;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			.givingBackImgContainer {
+				left: -65px;
+				top: 5px;
+				transform: rotate(10deg);
+				width: 77%;
+			}
 		}
 
 		@include bp(580) {
 			height: 460px;
+
+			.sectionContent3 {
+				flex-direction: row;
+				position: relative;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+
+			.givingBackImgContainer {
+				left: 50%;
+				top: 20px;
+				width: 100%;
+				transform: rotate(10deg) translate(-50%);
+			}
 		}
 	}
 
@@ -81,9 +143,44 @@
 	.soWeDidContainer {
 		margin-top: 9%;
 		margin-bottom: 3%;
+		@extend .relative;
+		z-index: 1;
+
+		.learnAboutProbioticsLink {
+			margin-left: 10%;
+		}
 
 		@include bp(768) {
 			margin: 0;
+
+			&-section3 {
+				margin: 0;
+				position: relative;
+				 
+				.learnAboutProbioticsLink {
+					position: absolute;
+					left: -250px;
+					bottom: -15px;
+				}
+			}
+		}
+
+		@include bp(580) {
+
+			&-section2 {
+				position: relative;
+				display: block;
+				width: 100%;
+			}
+
+			&-section3 {
+				display: flex;
+				flex-direction: column-reverse;
+
+				.learnAboutProbioticsLink {
+					position: static;
+				}
+			}
 		}
 	}
 
@@ -92,12 +189,6 @@
 
 		h4 {
 			font-family: $secondaryHeadingFont, sans-serif;
-
-			&::after {
-				content: "";
-				display: inline-block;
-				width: 100%;
-			}
 		}
 
 		h1,
@@ -107,23 +198,77 @@
 		}
 
 		&-section2 {
-			color: $mintGreen;
+			h4 {
+				color: $mintGreen;
+			}
 		}
 
 		&-section3 {
-			color: $purple;
+			h4,
+			h1,
+			h5 {
+				color: $purple;
+			}
 		}
 
 		.difference {
 			@include fontSize(50);
 			letter-spacing: -1;
 		}
+
+		@include bp(768) {
+			width: 200px;
+
+			&-section3 {
+				h4 {
+					@include fontSize(60);
+				}
+			}
+
+			.difference {
+				@include fontSize(33);
+				letter-spacing: 0;
+			}
+		}
+
+		@include bp(580) {
+			// width: 135px;
+
+			&-section3 {
+				h4 {
+					@include fontSize(40);
+				}
+			}
+
+			.difference {
+				@include fontSize(22);
+			}
+		}
+	}
+
+	.soWeDidContainer {
+
+		&-section2 {
+			display: flex;
+		}
 	}
 
 	.soWeDid {
+		width: 250px;
 
 		&-section2 {
-			color: $pink;
+			h5,
+			h3 {
+				color: $pink;
+			}
+		}
+
+		@include bp(768) {
+			width: 200px;
+		}
+
+		@include bp(580) {
+			// width: 135px;
 		}
 	}
 
@@ -133,9 +278,7 @@
 		@extend .alignItemsCenter;
 		width: 225px;
 		padding: 10px;
-		margin: {
-			top: 30px;
-		}
+		margin-top: 30px;
 
 		p {
 			margin: 0;
@@ -154,33 +297,25 @@
 			background: $yellow;
 			color: $purple;
 		}
-	}
 
-	@include bp(768) {
-		.sectionContent2 {
-			display: initial;
-			margin-top: 7%;
-		}
+		@include bp(580) {
+			width: 135px;
 
-		.sectionContent3 {
-			justify-content: flex-start;
-			flex-direction: column;
-			align-items: flex-end;
-		}
-
-		.soWeDidContainer-section2 {
-			display: flex;
-
-			a {
-				margin-left: 10%;
+			p {
+				@include fontSize(11);
 			}
-		}
 
-		.soWeDidContainer-section3 {
-			position: relative;
-			 
-			.learnAboutProbioticsLink {
-				position: absolute;
+			img {
+				width: 20px;
+			}
+			
+			&-section2 {
+				float: right;
+				margin: 125px 0 0;
+			}
+
+			&-section3 {
+				margin: 0 0 15px;
 			}
 		}
 	}

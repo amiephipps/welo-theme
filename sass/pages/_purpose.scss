@@ -4,18 +4,6 @@
 		background-size: cover;
 		height: 780px;
 
-		// &::after {
-		// 	content: '';
-		// 	opacity: 0.5;
-		// 	background: $yellow;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	right: 0;
-		// 	bottom: 0;
-		// 	z-index: -1;
-		// }	
-
 		h4 {
 			@include fontSize(82);
 			font-family: $bodyFontBold;
@@ -154,7 +142,7 @@
 			&:nth-of-type(2) {
 
 				.founderImage {
-					margin-right: -50px;
+					// margin-right: -50px;
 				}
 			}
 		}

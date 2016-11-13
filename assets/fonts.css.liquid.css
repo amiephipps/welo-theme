@@ -1,54 +1,54 @@
-// // Custom fonts
+// Custom fonts
 
-// @font-face {
-//   font-family: 'IntroRustBase';
-//   src: url( '{{ 'IntroRust-Base.eot' | asset_url }}');
-//   src: url( '{{ 'IntroRust-Base.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('IntroRust-Base.otf')  format('opentype')
-// 	     url('{{ 'IntroRust-Base.woff' | asset_url }}') format('woff'), url('{{ 'IntroRust-Base.ttf' | asset_url }}')  format('truetype'), url('{{ 'IntroRust-Base.svg#IntroRust-Base' | asset_url }}') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'IntroRust-Base';
+  src: url( '{{ 'IntroRust-Base.eot' | asset_url }}');
+  src: url( '{{ 'IntroRust-Base.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('IntroRust-Base.otf')  format('opentype')
+       url('{{ 'IntroRust-Base.woff' | asset_url }}') format('woff'), url('{{ 'IntroRust-Base.ttf' | asset_url }}')  format('truetype'), url('{{ 'IntroRust-Base.svg#IntroRust-Base' | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: 'Populaire';
-//   src: url('{{ 'Populaire.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Populaire.otf' | asset_url }}') format('opentype'),
-// 	     url('{{ 'Populaire.woff' | asset_url }}') format('woff'), url('{{ 'Populaire.ttf' | asset_url }}')  format('truetype'), url('{{ 'Populaire.svg#Populaire' | asset_url }}') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Populaire';
+  src: url('{{ 'Populaire.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Populaire.otf' | asset_url }}') format('opentype'),
+       url('{{ 'Populaire.woff' | asset_url }}') format('woff'), url('{{ 'Populaire.ttf' | asset_url }}')  format('truetype'), url('{{ 'Populaire.svg#Populaire' | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: 'CircularMedium';
-//   src: url('{{ 'Circular-Medium.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Circular-Medium.otf' | asset_url }}')  format('opentype'),
-// 	     url('{{ 'Circular-Medium.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Medium.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Medium.svg#Circular-Medium' | asset_url }}') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Circular-Medium';
+  src: url('{{ 'Circular-Medium.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Circular-Medium.otf' | asset_url }}')  format('opentype'),
+       url('{{ 'Circular-Medium.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Medium.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Medium.svg#Circular-Medium' | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: 'CircularBook';
-//   src: url('{{ 'Circular-Book.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Circular-Book.otf' | asset_url }}')  format('opentype'),
-// 	     url('{{ 'Circular-Book.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Book.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Book.svg#Circular-Book' | asset_url }}') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Circular-Book';
+  src: url('{{ 'Circular-Book.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Circular-Book.otf' | asset_url }}')  format('opentype'),
+       url('{{ 'Circular-Book.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Book.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Book.svg#Circular-Book' | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: 'CircularBold';
-//   src: url('{{ 'Circular-Bold.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Circular-Bold.otf' | asset_url }}')  format('opentype'),
-// 	     url('{{ 'Circular-Bold.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Bold.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Bold.svg#Circular-Bold' | asset_url }}') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Circular-Bold';
+  src: url('{{ 'Circular-Bold.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('{{ 'Circular-Bold.otf' | asset_url }}')  format('opentype'),
+       url('{{ 'Circular-Bold.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Bold.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Bold.svg#Circular-Bold' | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: 'CircularBlack';
-//   src: url('{{ 'Circular-Black.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('Circular-Black.otf')  format('opentype'),
-// 	     url('{{ 'Circular-Black.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Black.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Black.svg#Circular-Black' | asset_url }}') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'Circular-Black';
+  src: url('{{ 'Circular-Black.eot?#iefix' | asset_url }}') format('embedded-opentype'),  url('Circular-Black.otf')  format('opentype'),
+       url('{{ 'Circular-Black.woff' | asset_url }}') format('woff'), url('{{ 'Circular-Black.ttf' | asset_url }}')  format('truetype'), url('{{ 'Circular-Black.svg#Circular-Black' | asset_url }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
-// /*=====  End of Fonts  ======*/
+/*=====  End of Fonts  ======*/

@@ -1,4 +1,5 @@
 .givingBack {
+	overflow: hidden;
 
 	.section1 {
 		background: url( #{"{{ 'givingback-section1.jpg' | asset_url }}"} ) center center no-repeat;

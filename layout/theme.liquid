@@ -23,8 +23,8 @@
 
   {{ content_for_header }}
 
-  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
   {{ "fonts.css"  | asset_url | stylesheet_tag }}
+  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
   {{ 'social/social-icons.css' | global_asset_url | stylesheet_tag }}
   {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' | stylesheet_tag }}
   
@@ -45,7 +45,8 @@
   {{ 'option_selection.js' | shopify_asset_url | script_tag }}
 
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
-  {{ 'bigText.js' | asset_url | script_tag }}
+  {{ 'jquery.fittext.js' | asset_url | script_tag }}
+  {{ 'jQuery-FontSpy.js' | asset_url | script_tag }}
   {{ 'weloScript.js' | asset_url | script_tag }}
   <script>jQuery('html').removeClass('no-js').addClass('js');</script>
 
