@@ -30,9 +30,10 @@ var loadScript = function(url, callback){
 };
 
 /* This is my app's JavaScript */
-// var weloApp = function($){
+var weloApp = function($){
 
 	$(document).ready(function() {
+
 		$('.mobileNavIcon').click(function(){
 			$(this).toggleClass('open');
 			$('.mobileNav, footer').toggleClass('mobileOpen');
@@ -41,29 +42,29 @@ var loadScript = function(url, callback){
 			$('#products, #givingBack').toggleClass('whiteMenu');
 		});
 
+		function createBigTextScript() {
+			var scriptLink = " {{ 'bigText.js' | asset_url | script_tag }} "
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.src = scriptLink
+			document.getElementsByTagName("head")[0].appendChild(script);
 
-		$('.weWantedToMakeContainer h4, .soWeDid h5, .soWeDid h3').fitText(10)
+			if (!bt) {
+				var bt = BigText.noConflict(true);
+				$.fn.bt = bt.jQueryMethod;
+			}
+		}
 
-		// function createBigTextScript() {
-		// 	  var script = document.createElement("script");
-		// 	  script.type = "text/javascript";
-		// 	  script.src = " {{ 'bigText.js' | asset_url | script_tag }} "
-		// 	  document.getElementsByTagName("head")[0].appendChild(script);
-
-		// 	  var bt = BigText.noConflict(true);
-		// 	  $.fn.bt = bt.jQueryMethod;
-		// }
-
-		// fontSpy('IntroRust-Base', {
-		//   success: function() {
-		//     console.log('loaded')
-		//     createBigTextScript()
-		// 	$('.weWantedToMakeContainer').bt();
-		//   },
-		//   failure: function() {
-		//   	console.log('error')
-		//   }
-		// });
+		fontSpy('IntroRustBase', {
+		  success: function() {
+		   	console.log('loaded')
+		   	createBigTextScript()
+				$('.weWantedToMakeContainer').bt();
+		  },
+		  failure: function() {
+		  	console.log('error')
+		  }
+		});
 
 		// fontSpy('Populaire', {
 		//   success: function() {
@@ -81,16 +82,16 @@ var loadScript = function(url, callback){
 
 	})
 
-// };
+};
 
 /* If jQuery has not yet been loaded or if it has but it's too old for our needs, we will load jQuery from the Google CDN, and when it's fully loaded, we will run our app's JavaScript. Set your own limits here, the sample's code below uses 1.7 as the minimum version we are ready to use, and if the jQuery is older, we load 1.9. */
-// if ((typeof jQuery === 'undefined') || (parseFloat(jQuery.fn.jquery) < 1.7)) {
-//  	loadScript('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', function() {
-// 		jQuery191 = jQuery.noConflict(true);
-// 		weloApp(jQuery191);
-//   	});
-// } else {
-//   weloApp(jQuery);
-// }
+if ((typeof jQuery === 'undefined') || (parseFloat(jQuery.fn.jquery) < 1.7)) {
+ 	loadScript('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', function() {
+		jQuery191 = jQuery.noConflict(true);
+		weloApp(jQuery191);
+  	});
+} else {
+  weloApp(jQuery);
+}
 
 })();

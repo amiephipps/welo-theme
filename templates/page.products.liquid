@@ -4,7 +4,7 @@
 		<div class="wrapper">
 
 			<h3>Packed<br/>With<br/>Goodness.</h3>
-			<a class="meetTheProbioticsLink" href="#">
+			<a class="meetTheProbioticsLink" href="#productsSection2">
 				<div class="meetTheProbiotics">
 					<p>Meet the<br/>probiotics.</p>
 					{{ 'rightArrow.png' | asset_url | img_tag }}
@@ -14,7 +14,7 @@
 		</div>
 	</section>
 
-	<section class="section2">
+	<section class="section2" id="productsSection2">
 		<div class="wrapper">
 
 			<div class="section2-1">
@@ -23,16 +23,24 @@
 			</div>
 
 			<div class="section2-2">
-				<p>2 billion vegan probiotics</p>
-				<p>cold pressed fruits and veggies</p>
-				<p>organic</p>
-				<p>vegan</p>
-				<p>low sugar</p>
+				<div class="section2-2-1">
+					<p>2 billion vegan probiotics</p>
+					<p>cold pressed fruits and veggies</p>
+					<p>organic</p>
+					<p>vegan</p>
+					<p>low sugar</p>
+				</div>
+				
+				<div class="section2-2-2">
+					<p>In an independent lab study of a simulated gastric environment with a pH of 2.0 for two hours, GanedenBC30 cells were delivered 10X more effectively than common yogurt cultures.</p>
+				</div>
 			</div>
+
 			<div class="section2-3">
 				{{ 'yogurts.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'section2-3-desktop' }}
 				{{ 'yogurtsMobile.png' | asset_url | img_tag: 'photo of all probiotic drinks', 'section2-3-mobile' }}
 			</div>
+
 			<div class="section2-4">
 				<p>In an independent lab study of a simulated gastric environment with a pH of 2.0 for two hours, GanedenBC30 cells were delivered 10X more effectively than common yogurt cultures.</p>
 			</div>
@@ -84,7 +92,7 @@
 
 		<div class="notifyMe">
 			<h6>Notify Me:</h6>
-			<input type="text" placeholder="Me email.">
+			<input type="email" placeholder="Me email.">
 			{{ 'purpleRightArrow.png' | asset_url | img_tag: 'arrow pointing right', 'rightArrow'}}
 		</div>
 	</section>

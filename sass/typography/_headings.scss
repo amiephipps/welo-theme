@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	@include fontSize(160);
-	font-family: 'IntroRust-Base', sans-serif;
+	font-family: 'IntroRustBase', sans-serif;
 
 	@include bp(768) {
 		@include fontSize(108);
@@ -22,7 +22,7 @@ h1 {
 h2 {
 	@include fontSize(146);
 	line-height: 122px;
-	font-family: 'IntroRust-Base', sans-serif;
+	font-family: 'IntroRustBase', sans-serif;
 
 	@include bp(768) {
 		@include fontSize(87);
