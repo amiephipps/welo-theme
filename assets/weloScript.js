@@ -33,6 +33,8 @@ var loadScript = function(url, callback){
 var weloApp = function($){
 
 	$(document).ready(function() {
+		var poplaireLoaded = false;
+		var IntroRustBaseLoaded = false;
 
 		$('.mobileNavIcon').click(function(){
 			$(this).toggleClass('open');
@@ -42,6 +44,27 @@ var weloApp = function($){
 			$('#products, #givingBack').toggleClass('whiteMenu');
 		});
 
+		fontSpy('IntroRustBase', {
+		  success: function() {
+		   	IntroRustBaseLoaded = true
+		  },
+		  failure: function(error) {
+		  	console.log(error)
+		  }
+		});
+
+		fontSpy('Populaire', {
+		  success: function() {
+		   	console.log('loaded2')
+		   	poplaireLoaded = true
+		   	// createBigTextScript()
+				// $('.weWantedToMakeContainer').bt();
+		  },
+		  failure: function(err) {
+		  	console.log(err)
+		  }
+		});
+
 		function createBigTextScript() {
 			var scriptLink = " {{ 'bigText.js' | asset_url | script_tag }} "
 			var script = document.createElement("script");
@@ -49,37 +72,15 @@ var weloApp = function($){
 			script.src = scriptLink
 			document.getElementsByTagName("head")[0].appendChild(script);
 
-			if (!bt) {
-				var bt = BigText.noConflict(true);
-				$.fn.bt = bt.jQueryMethod;
-			}
+			var bt = BigText.noConflict(true);
+			$.fn.bt = bt.jQueryMethod;
+
+			$('.weWantedToMakeContainer, .soWeDid').bt();
 		}
 
-		fontSpy('IntroRustBase', {
-		  success: function() {
-		   	console.log('loaded')
-		   	createBigTextScript()
-				$('.weWantedToMakeContainer').bt();
-		  },
-		  failure: function() {
-		  	console.log('error')
-		  }
-		});
-
-		// fontSpy('Populaire', {
-		//   success: function() {
-		//     console.log('loaded')
-		//     createBigTextScript()
-		// 	$('.weWantedToMakeContainer').bt();
-		//   },
-		//   failure: function() {
-		//   	console.log('error')
-		//   }
-		// });
-
-
-
-
+		if (poplaireLoaded && IntroRustBaseLoaded) {
+			createBigTextScript()
+		}
 	})
 
 };
