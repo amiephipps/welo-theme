@@ -28,7 +28,8 @@
 	.section2 {
 		@extend .relative;
 		height: 520px;
-		background-color: $lightGrey;
+		background: url( #{"{{'paperTexture.png' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
 
 		.products2 {
 			@extend .absolute;
@@ -70,25 +71,31 @@
 
 		@include bp(768) {
 			height: 480px;
+			background-position: -105px center;
 
 			& > div {
 				height: 100%;
 			}
 
 			.sectionContent2 {
-				margin-top: 10%;
+				margin-top: 8%;
 				flex-direction: column;
 			}
 		}
 
 		@include bp(580) {
+			height: auto;
+		}
+
+		@include bp(320) {
 			height: 400px;
 		}
 	}
 
 	.section3 {
 		position: relative;
-		background: $orange;
+		background: url( #{"{{'orangePaperTexture.png' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
 		overflow: hidden;
 
 		.givingBackImgContainer {
@@ -99,6 +106,7 @@
 
 		@include bp(768) {
 			height: 520px;
+			background-position: -30px center;
 
 			> div,
 			.sectionContent3 {
@@ -120,20 +128,23 @@
 		}
 
 		@include bp(580) {
-			height: 460px;
+			height: auto;
+			background: url( #{"{{'orangePaperTextureMobile.png' | asset_url }}"} ) center center no-repeat;
 
 			.sectionContent3 {
 				flex-direction: row;
-				position: relative;
 				flex-wrap: nowrap;
 				justify-content: space-between;
+				align-items: stretch;
+				margin-top: 68%;
+				margin-bottom: 10%;
 			}
 
 			.givingBackImgContainer {
 				left: 50%;
-				top: 20px;
+				top: 50px;
 				width: 100%;
-				transform: rotate(10deg) translate(-50%);
+				transform: rotate(10deg) translate(-40%);
 			}
 		}
 	}
@@ -154,7 +165,6 @@
 			margin: 0;
 
 			&-section3 {
-				margin: 0;
 				position: relative;
 			}
 		}
@@ -164,12 +174,6 @@
 			&-section2 {
 				position: relative;
 				display: block;
-				width: 100%;
-			}
-
-			&-section3 {
-				display: flex;
-				flex-direction: column-reverse;
 			}
 		}
 	}
@@ -222,9 +226,14 @@
 		}
 
 		@include bp(580) {
-			// width: 135px;
+
+			&-section2 {
+				width: 50%;
+			}
 
 			&-section3 {
+				width: 47%;
+
 				h4 {
 					@include fontSize(40);
 				}
@@ -236,14 +245,25 @@
 		}
 	}
 
+
 	.soWeDidContainer {
 
 		@include bp(768) {
+
 			&-section2 {
 				display: flex;
 			}
 		}
 
+		@include bp(580) {
+			
+			&-section3 {
+				width: 47%;
+				display: flex;
+				flex-direction: column-reverse;
+				justify-content: space-between;
+			}
+		}
 	}
 
 	.soWeDid {
@@ -261,35 +281,59 @@
 		}
 
 		@include bp(580) {
-			// width: 135px;
+
+			&-section2 {
+				width: 50%;
+			}
+
+			&-section3 {
+				width: 100%;
+			}
 		}
 	}
 
 	.learnAboutProbioticsLink {
-		width: 225px;
-		margin-left: 10%;
+		width: 250px;
+		margin-top: 30px;
+		margin-left: 10px;
+		display: block;
 
 		@include bp(768) {
-			margin: 0;
+			width: 185px;
+
+			&-section2 {
+				margin-top: 40px;
+				margin-left: 45px;
+			}
 
 			&-section3 {
 				position: absolute;
-				left: -250px;
+				left: -225px;
 				bottom: -15px;
 			}
 		}
 
 		@include bp(580) {
-			width: 135px;
 
 			&-section2 {
+				width: 130px;
 				position: absolute;
-				bottom: -90px;
+				bottom: 0px;
 				right: 0;
 			}
 
 			&-section3 {
+				margin-top: 0;
+				width: 100%;
+				margin-left: 5px;
 				position: static;
+			}
+		}
+
+		@include bp(320) {
+
+			&-section2 {
+				bottom: -100px;
 			}
 		}
 	}
@@ -299,7 +343,6 @@
 		@extend .justifyContentSpaceBetween;
 		@extend .alignItemsCenter;
 		padding: 10px;
-		margin-top: 30px;
 
 		p {
 			margin: 0;

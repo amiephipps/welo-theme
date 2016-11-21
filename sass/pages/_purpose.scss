@@ -3,8 +3,9 @@
 		background: url( #{"{{'purpose-section1.jpg' | asset_url }}"} ) center center no-repeat;
 		background-size: cover;
 		height: 780px;
+		@extend .relative;
 
-		h4 {
+		h5 {
 			@include fontSize(82);
 			font-family: $bodyFontBold;
 			margin: {
@@ -13,6 +14,15 @@
 			white-space: nowrap;
 			letter-spacing: -1.21px;
 			line-height: 82.8px;
+		}
+
+		h4 {
+			@extend .uppercase;
+			@extend .absolute;
+			bottom: -120px;
+			right: 4%;
+			color: $purple;
+			text-align: right;
 		}
 
 		p {
@@ -29,9 +39,13 @@
 		@include bp(768) {
 			height: 700px;
 
-			h4 {
+			h5 {
 				@include fontSize(62.5);
 				line-height: 67px;
+			}
+
+			h4 {
+				bottom: -80px;
 			}
 
 			p {
@@ -47,10 +61,14 @@
 		@include bp(580) {
 			height: 625px;
 
-			h4 {
+			h5 {
 				@include fontSize(44);
 				line-height: 44px;
 			}		
+
+			h4 {
+				bottom: -60px;
+			}
 
 			p {
 				@include fontSize(18);
@@ -64,26 +82,18 @@
 	}
 
 	.section2 {
-
-		h4 {
-			@extend .uppercase;
-			color: $purple;
-			text-align: right;
-			margin-top: -63px;
-		}
+		background: url( #{"{{'purposePaperTexture.png' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
+		padding-top: 50px;
 
 		@include bp(768) {
-
-			h4 {
-				margin-top: -55px;
-			}
+			background: url( #{"{{'purposePaperTextureTablet.png' | asset_url }}"} ) -275px -185px no-repeat;
 		}
 
 		@include bp(580) {
+			background-position: -150px -185px;
+			overflow: hidden;
 
-			h4 {
-				margin-top: -47px;
-			}		
 		}
 	}
 
@@ -142,7 +152,7 @@
 			&:nth-of-type(2) {
 
 				.founderImage {
-					// margin-right: -50px;
+					margin-right: -50px;
 				}
 			}
 		}
@@ -167,6 +177,15 @@
 	   	word-spacing: unset;
 	   	white-space: nowrap;
 	   	top: 150px;
+	   }
+
+	   @include bp(768) {
+	   	white-space: initial;
+
+	   	&:nth-of-type(1),
+	   	&:nth-of-type(3) {
+	   		text-align: right;
+	   	}
 	   }
 	}
 }

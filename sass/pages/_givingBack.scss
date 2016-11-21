@@ -59,12 +59,12 @@
 	}
 
 	.section2 {
-		background: $purple;
+		background: url( #{"{{'givingBackPurplePaperTexture.png' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
 
 		> div {
 			@extend .flexParent;
 			@extend .justifyContentSpaceAround;
-			// @extend .alignItemsCenter;
 		}
 
 		&Container {

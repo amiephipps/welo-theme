@@ -5,6 +5,7 @@
 	height: 155px;
 	right: 0;
 	margin-right: 10%;
+	z-index: 2;
 
 	img {
 		display: block;
@@ -66,6 +67,7 @@
 		width: 100%;
 		top: 0;
 		left: 0;
+		z-index: 10;
 	}
 }
 

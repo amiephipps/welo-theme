@@ -55,10 +55,7 @@ var weloApp = function($){
 
 		fontSpy('Populaire', {
 		  success: function() {
-		   	console.log('loaded2')
 		   	poplaireLoaded = true
-		   	// createBigTextScript()
-				// $('.weWantedToMakeContainer').bt();
 		  },
 		  failure: function(err) {
 		  	console.log(err)

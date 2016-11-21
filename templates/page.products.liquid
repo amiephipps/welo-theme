@@ -54,13 +54,22 @@
 			<div class="section3Content">
 				<div class="section3-1">
 					<h3 class="section3-1-desktop">We<br/>Love<br/>Your<br/>Guts.</h3>
-					<h3 class="section3-1-mobile">We Love Your Guts.</h3>
+					<h3 class="section3-1-mobile">We Love<br/>Your Guts.</h3>
 				</div>
 				
 				<div class="section3-2">
-					{{ 'digestiveSystemDesktop.svg' | asset_url | img_tag: 'digestive system', 'section3-2-desktop' }}
-					{{ 'digestiveSystemTablet.svg' | asset_url | img_tag: 'digestive system', 'section3-2-tablet' }}
-					{{ 'digestiveSystemMobile.svg' | asset_url | img_tag: 'digestive system', 'section3-2-mobile' }}
+					{{ 'digestiveSystemDesktop.svg' | asset_url | img_tag: 'The Second Brain: Our digestive system is the second largest part of our neurological system, most illnesses originate in the gut.
+Appetite: Probiotics are the fastest growing functional food on the market with a growth rate of 7% year over year. †
+Need: More than 20 million Canadians suffer from digestive disorders every year. ††
+Reality: 80 percent of your entire immune system is located in your digestive tract.', 'section3-2-desktop' }}
+					{{ 'digestiveSystemTablet.svg' | asset_url | img_tag: 'The Second Brain: Our digestive system is the second largest part of our neurological system, most illnesses originate in the gut.
+Appetite: Probiotics are the fastest growing functional food on the market with a growth rate of 7% year over year. †
+Need: More than 20 million Canadians suffer from digestive disorders every year. ††
+Reality: 80 percent of your entire immune system is located in your digestive tract.', 'section3-2-tablet' }}
+					{{ 'digestiveSystemMobile2.svg' | asset_url | img_tag: 'The Second Brain: Our digestive system is the second largest part of our neurological system, most illnesses originate in the gut.
+Appetite: Probiotics are the fastest growing functional food on the market with a growth rate of 7% year over year. †
+Need: More than 20 million Canadians suffer from digestive disorders every year. ††
+Reality: 80 percent of your entire immune system is located in your digestive tract.', 'section3-2-mobile' }}
 
 					<p>† Euromonitor  †† <a href="http://www.cdhf.ca/en/statistics" target="_blank">http://www.cdhf.ca/en/statistics</a></p>
 
@@ -97,9 +106,11 @@
 		</div>
 
 		<div class="notifyMe">
-			<h6>Notify Me:</h6>
-			<input type="email" placeholder="Me email.">
-			{{ 'purpleRightArrow.png' | asset_url | img_tag: 'arrow pointing right', 'rightArrow'}}
+			{% include 'mailchimp' %}
+
+			
+
+
 		</div>
 	</section>
 

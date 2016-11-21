@@ -49,7 +49,7 @@ h3{
 
 h4 {
 	@include fontSize(90);
-	// line-height: 79px;
+	line-height: 79px;
 
 	@include bp(768) {
 		@include fontSize(69);
@@ -58,7 +58,7 @@ h4 {
 
 	@include bp(580) {
 		@include fontSize(50);
-		line-height: 36px;
+		line-height: 0.8;
 	}
 }
 
