@@ -1,7 +1,4 @@
 .homepage {
-	h1, h2, h3, h4, h5, h6 {
-		// text-align: justify;
-	}
 
 	.section1 {
 		background: url( #{"{{'homepage-section1.jpg' | asset_url }}"} ) center center no-repeat;
@@ -30,6 +27,11 @@
 		height: 520px;
 		background: url( #{"{{'paperTexture.png' | asset_url }}"} ) center center no-repeat;
 		background-size: cover;
+
+		.wrapper,
+		.sectionContent2 {
+			height: 100%;
+		}
 
 		.products2 {
 			@extend .absolute;
@@ -73,10 +75,6 @@
 			height: 480px;
 			background-position: -105px center;
 
-			& > div {
-				height: 100%;
-			}
-
 			.sectionContent2 {
 				margin-top: 8%;
 				flex-direction: column;
@@ -97,21 +95,22 @@
 		background: url( #{"{{'orangePaperTexture.png' | asset_url }}"} ) center center no-repeat;
 		background-size: cover;
 		overflow: hidden;
+		height: 520px;
+
+		> div,
+		.sectionContent3 {
+			height: 100%;
+		}
 
 		.givingBackImgContainer {
 			@extend .absolute;
 			left: 48%;
 			transform: translateX(-45%);
+			top: 15px;
 		}
 
 		@include bp(768) {
-			height: 520px;
 			background-position: -30px center;
-
-			> div,
-			.sectionContent3 {
-				height: 100%;
-			}
 
 			.sectionContent3 {
 				justify-content: center;
@@ -152,11 +151,12 @@
 	.sectionContent {
 		@extend .flexParent;
 		@extend .justifyContentSpaceBetween;
+		@extend .alignItemsCenter;
 	}
 
 	.weWantedToMakeContainer,
 	.soWeDidContainer {
-		margin-top: 9%;
+		margin-top: 5%;
 		margin-bottom: 3%;
 		@extend .relative;
 		z-index: 1;
