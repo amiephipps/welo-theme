@@ -83,90 +83,126 @@ var weloApp = function($){
 		}
 
 		// parallax
+		$(window).scroll(function() {
+			var iphone5bp = 320
+			var tablet = 768
+			var mobile = 580
 
-		// function shastaParallax() {	
-			
-		// 	if ($('body').css("minWidth") != '480px') {
-		// 		$('#shasta_scene div').each(function(i,el) {
-		// 			// Define amount of parallax to apply based on attribute
-		// 			var parallaxScale = (19.01-$(el).data('parallax'))*.02;
-			
-		// 			// Apply parallax to vertical position (adjusting top margin)
-		// 			// Scale the water plane
-		// 			if ($(el).is('#water')) {
-		// 				$(el).css({
-		// 					'height': 423/1276*100 - $(window).scrollTop()*.025 + '%',
-		// 					'margin-top':$(window).scrollTop()*parallaxScale + $(window).scrollTop()*.06
-		// 				});
-		// 			} else {
-		// 				$(el).css({'margin-top':$(window).scrollTop()*parallaxScale});
-		// 			}
-		// 		});
-		// 	};
-			
-		// 	$('.float.shasta').css({'margin-top': $(window).scrollTop()*0.45 });
-		// }
-
-		$(window).scroll(function()
-		{
-			// if ($('.pane, .contact_pane').length) {
-			// 	$('.pane, .contact_pane').not('.half').each(function(i,el) {
-			// 		var thisTop = parseInt($(el).css('top')); // read current CSS top attr as px val
-			// 		var yPos = -($(window).scrollTop()-$(el).offset().top+thisTop)/6;
-			// 		if ($(el).hasClass('above')) $(el).css({'margin-top':yPos*1.6});
-			// 			else $(el).css({'margin-top':yPos});
-			// 	});
-			// }
-			if ($('.caption, .block').length) {
-				$('.caption, .block').each(function(i,el) {
-					if ($(el).parents('.pane').length) var parentOffset = $(el).parents('.pane').offset().top; else var parentOffset = $(el).parents('section').offset().top;
-					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/4;
-					$(el).css({'margin-top':yPos});
+			//homepage
+			if ($('.learnAboutProbioticsLink').length && window.innerWidth > iphone5bp) {
+				$('.learnAboutProbioticsLink').each(function(i,el) {
+					var parentOffset = $(el).parents('.soWeDidContainer').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/25;
+					$(el).css({'margin-top': yPos});
 				});
 			}
-			// if ($('.float:not(.shasta)').length) {
-			// 	$('.float:not(.shasta)').each(function(i,el) {
-			// 		var thisTop = parseInt($(el).css('top')); // read current CSS top attr as px val			
-			// 		var yPos = -($(window).scrollTop()-$(el).offset().top+thisTop)/9;
-			// 		$(el).css({'margin-top':yPos});
+
+			if ($('.sectionContent2, .sectionContent3').length && window.innerWidth > mobile) {
+				$('.sectionContent2, .sectionContent3').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.sectionContent2').length && window.innerWidth <= mobile) {
+				$('.sectionContent2').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/5;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.sectionContent3').length && window.innerWidth <= mobile) {
+				$('.sectionContent3').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top-300)/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.block').length) {
+				$('.block').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = ($(window).scrollTop()-parentOffset+$(el).position().top)/11;
+					$(el).css({'bottom': yPos});
+				});
+			}
+
+			// purpose
+			if ($('.section1Content').length) {
+				$('.section1Content').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/6;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.founders').length) {
+				$('.founders').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-($(el).position().top+100))/3;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			// products
+			if ($('.section2-3').length && window.innerWidth > tablet) {
+				$('.section2-3').each(function(i,el) {
+					var parentOffset = $(el).parents('#productsSection2').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/4;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.section2-3').length && window.innerWidth <= mobile) {
+				$('.section2-3').each(function(i,el) {
+					var parentOffset = $(el).parents('#productsSection2').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/10;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			// if ($('.section3-2').length && window.innerWidth <= tablet) {
+			// 	$('.section3-2').each(function(i,el) {
+			// 		var parentOffset = $(el).parents('.section3Content').offset().top;
+			// 		var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/40;
+			// 		$(el).css({'margin-top': yPos});
 			// 	});
 			// }
-			// if ($('.element').length) {
-			// 	$('.element').each(function(i,el) {
-			// 		var thisTop = parseInt($(el).css('top')); // read current CSS top attr as px val
-			// 		var yPos = -($(window).scrollTop()-$(el).offset().top+thisTop)/12;
-			// 		if ($(el).hasClass('above')) $(el).css({'margin-top':yPos*1.6});
-			// 			else if ($(el).hasClass('flyover_plane')) $(el).css({'margin-top':yPos*3});
-			// 			else if ($(el).hasClass('small_cloud')) $(el).css({'margin-top':yPos*3});
-			// 			else $(el).css({'margin-top':yPos});
-			// 	});
-			// 	// Let's add some side-to-side movement to the seeding plane...
-			// 	if ($('.seeding_plane').length) $('.seeding_plane').css({'margin-left':($(window).scrollTop()-$('.seeding_plane').offset().top)/3 - $(window).height()/6 });
-			// }
-			// if ($('#commercial_scale .cloud').length) {
-			// 	$('#commercial_scale .cloud').each(function(i,el) {
-			// 		var thisTop = parseInt($(el).css('top')); // read current CSS top attr as px val
-			// 		var yPos = -($(window).scrollTop()-$(el).offset().top+thisTop)/2.5;
-			// 		$(el).css({'margin-top':yPos});
-			// 	});
-			// }
-			// if ($('.backdrop.move').length) {
-			// 	$('.backdrop.move').each(function(i,el) {
-			// 		var yPos = -($(window).scrollTop()-$(el).offset().top)/16;
-			// 		if ($(el).hasClass('left')) var $alignment = 'left ';
-			// 			else if ($(el).hasClass('right')) var $alignment = 'right '
-			// 				else var $alignment = 'center ';
-			// 		$(el).css({'background-position':$alignment+yPos+'px'});
-			// 	});
-			// }
-			// if ($('.availability').length) {
-			// 	$('.availability').each(function(i,el) {
-			// 		var thisTop = parseInt($(el).css('top')); // read current CSS top attr as px val
-			// 		var yPos = -($(window).scrollTop()-$(el).offset().top+thisTop)/12;
-			// 		$(el).css({'margin-top':yPos});
+
+			if ($('.section4Content').length) {
+				$('.section4Content').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.section5Content').length && window.innerWidth > iphone5bp) {
+				$('.section5Content').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			// giving back
+			if ($('.section2Container h6').length && window.innerWidth > tablet) {
+				$('.section2Container h6').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/5;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			// if ($('.section2Container h6').length && window.innerWidth <= tablet) {
+			// 	$('.section2Container h6').each(function(i,el) {
+			// 		var parentOffset = $(el).parents('section').offset().top;
+			// 		var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/10;
+			// 		$(el).css({'margin-top': yPos});
 			// 	});
 			// }
-			// if ($('#shasta_scene').length) { shastaParallax();	 }
 		})
 	})
 

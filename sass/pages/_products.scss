@@ -134,8 +134,12 @@
 			display: none;
 		}
 
+		.section2-2 {
+			margin-bottom: 190px;
+		}
+
 		.section2-3 {
-			margin: 120px 0px 70px;
+			margin: 0px 0px 70px;
 
 			&-mobile {
 				display: none;
@@ -171,14 +175,18 @@
 				top: -60px;
 			}
 
-			.section2-2,
+			.section2-2 {
+				margin-bottom: 0px;
+				width: 50%;
+			}
+
 			.section2-3 {
-				width: 49%;
+				width: 44%;
 			}
 
 			.section2-2-1 {
 				width: initial;
-				margin: 0 0 15%;
+				margin: 0 0 21%;
 
 				p {
 					@include fontSize(21);
@@ -240,6 +248,10 @@
 
 			.section2-2 {
 				margin-bottom: 20px;
+			}
+
+			.section2-3 {
+				padding-top: 10%;
 			}
 
 			.section2-2-1 {
@@ -456,7 +468,7 @@
 		background: $lightGreen;
 
 		.section4Content {
-			padding: 10% 0 5%;
+			padding: 5% 0;
 			width: 45%;
 		}
 
@@ -716,6 +728,13 @@
 
 			&-imgMobile {
 				display: block;
+			}
+		}
+
+		@include bp(320) {
+
+			h4 {
+				@include fontSize(40);
 			}
 		}
 	}

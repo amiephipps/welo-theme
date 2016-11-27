@@ -68,7 +68,7 @@
 		}
 
 		&Container {
-			width: 41%;
+			width: 45%;
 		}
 
 		h6 {
@@ -76,6 +76,7 @@
 			color: $mintGreen;
 			letter-spacing: -0.33px;
 			line-height: 39px;
+			padding-top: 5%;
 		}
 
 		p {
@@ -84,12 +85,13 @@
 		}
 
 		.givingBackImgContainer {
+			@extend .relative;
+			width: 110%;
+			top: -90px;
+			left: -150px;
 
 			img {
-				@extend .relative;
 				transform: rotate(9deg);
-				top: -90px;
-				left: -150px;
 			}
 		}
 
@@ -100,22 +102,15 @@
 			}
 
 			.givingBackImgContainer {
-				// height: 400px;
+				top: -50px;
 
-				img {
-					top: -50px;
-				}
 			}
 		}
 
 		@include bp(580) {
 
 			.givingBackImgContainer {
-				// height: 400px;
-
-				img {
-					left: 50px;
-				}
+				left: 50px;
 			}
 		}
 	}

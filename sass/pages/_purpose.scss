@@ -4,6 +4,7 @@
 		background-size: cover;
 		height: 780px;
 		@extend .relative;
+		padding-top: 10%;
 
 		h5 {
 			@include fontSize(82);
@@ -77,6 +78,7 @@
 
 			&Content {
 				width: 100%;
+				padding-top: 10%;
 			}
 		}
 	}
