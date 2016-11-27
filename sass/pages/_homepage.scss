@@ -182,9 +182,17 @@
 
 	.weWantedToMakeContainer {
 		width: 300px;
+		line-height: 79.68px;
 
 		h4 {
 			font-family: $secondaryHeadingFont, sans-serif;
+			/* We Wanted to make a: */
+			// font-family: Populaire;
+			// font-size: 90.23px;
+			// color: #B7DEBF;
+			// letter-spacing: 1.64px;
+			line-height: 79.68px;
+			// line-height: normal;
 		}
 
 		h1,
@@ -194,6 +202,8 @@
 		}
 
 		&-section2 {
+			z-index: 0;
+
 			h4 {
 				color: $mintGreen;
 			}
@@ -355,15 +365,25 @@
 
 		&-section2 {
 			background: $purple;
+			transition: all 1s;
 
 			p {
 				color: $white;
+			}
+
+			&:hover {
+				background: $green;
 			}
 		}
 
 		&-section3 {
 			background: $yellow;
 			color: $purple;
+			transition: all 1s;
+
+			&:hover {
+				background: $mintGreen;
+			}
 		}
 
 		@include bp(580) {

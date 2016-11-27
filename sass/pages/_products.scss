@@ -531,7 +531,7 @@
 			div#mce-success-response.response,
 			div#mce-error-response {
 				margin-top: 3px;
-				@include fontSize(12);
+				@include fontSize(10);
 			}
 
 			#mc_embed_signup div.mce_inline_error {
