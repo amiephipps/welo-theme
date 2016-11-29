@@ -45,14 +45,14 @@
 
 @mixin bp($point) {
 
-  $bp1200:      "(max-width: 1200px)"; 
+  $bp1280:      "(max-width: 1280px)"; 
   $bp1024:      "(max-width: 1024px)"; 
   $bp768:       "(max-width: 768px)"; 
   $bp480:       "(max-width: 580px)"; 
   $bp320:       "(max-width: 320px)"; 
   
-  @if $point == 1200 {
-    @media #{$bp1200} { @content; }
+  @if $point == 1280 {
+    @media #{$bp1280} { @content; }
   }
   @else if $point == 1024 {
     @media #{$bp10124} { @content; }

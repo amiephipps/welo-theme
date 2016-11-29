@@ -38,6 +38,7 @@
 			background: $pink;
 			width: 225px;
 			padding: 10px;
+			transition: 1s all;
 			margin: {
 				top: 30px;
 			}
@@ -51,6 +52,10 @@
 
 			img {
 				transform: rotate(90deg);
+			}
+
+			&:hover {
+				background: $purple;
 			}
 		}
 
@@ -115,7 +120,6 @@
 
 		.section2-2-1 {
 			width: 33%;
-			margin-top: 95px;
 
 			p {
 				@include fontSize(24);
@@ -136,6 +140,7 @@
 
 		.section2-2 {
 			margin-bottom: 190px;
+			margin-top: 95px;
 		}
 
 		.section2-3 {
@@ -158,7 +163,7 @@
 		}
 
 		@include bp(768) {
-			height: 680px;
+			height: 700px;
 			padding-bottom: 4%;
 
 			> div {
@@ -186,7 +191,7 @@
 
 			.section2-2-1 {
 				width: initial;
-				margin: 0 0 21%;
+				margin: 0 0 18%;
 
 				p {
 					@include fontSize(21);
@@ -255,7 +260,6 @@
 			}
 
 			.section2-2-1 {
-				margin: 0;
 
 				p {
 					@include fontSize(18);
@@ -505,6 +509,7 @@
 				line-height: 1;
 				text-transform: uppercase;
 				color: $white;
+				padding-bottom: 4px;
 			}
 
 			input {
@@ -520,7 +525,7 @@
 				background: #d7ed96 url(//cdn.shopify.com/s/files/1/1557/5885/t/3/assets/purpleRightArrow.png?16404003058298160106) center center no-repeat;
 				position: absolute;
 				right: 42px;
-				bottom: 42px;
+				top: 70px;
 				padding: 10px;
 				width: 55px;
 				height: 41px;
@@ -529,18 +534,17 @@
 			}
 
 			div#mce-success-response.response,
-			div#mce-error-response {
-				margin-top: 3px;
-				@include fontSize(10);
+			div#mce-error-response.response {
+				padding-top: 4px;
+				width: 100%;
+				@include fontSize(12);
 			}
 
 			#mc_embed_signup div.mce_inline_error {
-				position: absolute;
-				bottom: 0;
-				padding: 5px 0;
 				color: $white;
 				background: none;
-				@include fontSize(10);
+				@include fontSize(12);
+				padding: 4px 0 0;
 			}
 
 			::-webkit-input-placeholder { /* Chrome */
