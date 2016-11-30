@@ -192,17 +192,13 @@
 	.weWantedToMakeContainer {
 		width: 300px;
 
+		.bigtext-line0 {
+			line-height: 108.68px;
+		}
+
 		h4 {
 			font-family: $secondaryHeadingFont, sans-serif;
 			line-height: 79.68px;
-		}
-
-		.superJuice:first-of-type {
-			line-height: 75.12;
-		}
-
-		.superJuice:nth-of-type(2) {
-			line-height: 87.36px;
 		}
 
 		h1,
@@ -234,6 +230,14 @@
 
 		@include bp(1280) {
 			width: 200px;
+			
+			.bigtext-line0 {
+				line-height: 63px;
+			}
+
+			h4 {
+				line-height: 48.78px;
+			}
 
 			&-section3 {
 				h4 {
@@ -248,6 +252,18 @@
 		}
 
 		@include bp(580) {
+
+			h4 {
+				line-height: 0.8;
+			}
+
+			.bigtext-line0 {
+				line-height: 1;
+			}
+
+			.bigtext-line1 {
+				line-height: 0.7;
+			}
 
 			&-section2 {
 				width: 50%;
@@ -300,9 +316,17 @@
 
 		@include bp(1280) {
 			width: 200px;
+
+			.bigtext-line1 {
+				line-height: 77px;
+			}
 		}
 
 		@include bp(580) {
+
+			.bigtext-line1 {
+				line-height: 0.75;
+			}
 
 			&-section2 {
 				width: 50%;

@@ -98,10 +98,18 @@ var weloApp = function($){
 				});
 			}
 
-			if ($('.sectionContent2').length && window.innerWidth > mobile) {
+			if ($('.sectionContent2').length && window.innerWidth > desktop) {
 				$('.sectionContent2').each(function(i,el) {
 					var parentOffset = $(el).parents('section').offset().top;
-					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/2;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)-275/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.sectionContent2').length && window.innerWidth <= desktop && window.innerWidth > mobile) {
+				$('.sectionContent2').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)-200/2;
 					$(el).css({'margin-top': yPos});
 				});
 			}
@@ -186,7 +194,7 @@ var weloApp = function($){
 			if ($('.section2-3').length && window.innerWidth > tablet) {
 				$('.section2-3').each(function(i,el) {
 					var parentOffset = $(el).parents('#productsSection2').offset().top;
-					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/4;
+					var yPos = -(($(window).scrollTop()-parentOffset+$(el).position().top)/4)+50;
 					$(el).css({'margin-top': yPos});
 				});
 			}
