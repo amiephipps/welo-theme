@@ -48,7 +48,8 @@
   $bp1280:      "(max-width: 1280px)"; 
   $bp1024:      "(max-width: 1024px)"; 
   $bp768:       "(max-width: 768px)"; 
-  $bp480:       "(max-width: 580px)"; 
+  $bp580:       "(max-width: 580px)"; 
+  $bp480:       "(max-width: 480px)"; 
   $bp320:       "(max-width: 320px)"; 
   
   @if $point == 1280 {
@@ -61,6 +62,9 @@
     @media #{$bp768}  { @content; }
   }   
   @else if $point == 580 {
+    @media #{$bp580}  { @content; }
+  }
+  @else if $point == 480 {
     @media #{$bp480}  { @content; }
   }
   @else if $point == 320 {

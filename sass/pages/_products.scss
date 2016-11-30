@@ -536,6 +536,7 @@
 			div#mce-success-response.response,
 			div#mce-error-response.response {
 				padding-top: 4px;
+				margin: 0;
 				width: 100%;
 				@include fontSize(12);
 			}
@@ -545,6 +546,7 @@
 				background: none;
 				@include fontSize(12);
 				padding: 4px 0 0;
+				margin: 0;
 			}
 
 			::-webkit-input-placeholder { /* Chrome */
@@ -583,10 +585,9 @@
 			.notifyMe {
 				width: 390px;
 				padding: 20px;
-				height: 135px;
 
 				.rightArrow {
-					bottom: 52px;
+					top: 46px;
 					right: 22px;
 				}
 			}
@@ -609,14 +610,8 @@
 
 			.notifyMe {
 				margin: 0;
-				padding: 10px 4% 45px;
 				width: 100%;
-				height: 150px;
-
-				.rightArrow {
-					bottom: 77px;
-					right: 4.4%;
-				}
+				padding: 20px 20px 40px;
 
 				#mc_embed_signup div.mce_inline_error {
 					bottom: 20px;
@@ -673,7 +668,7 @@
 			background: url( #{"{{'productsGreenPaperTextureTablet.png' | asset_url }}"} ) -260px center no-repeat;
 
 			&Headings {
-				width: 52%;
+				width: 51%;
 				margin-top: 18%;
 			}
 
@@ -705,7 +700,7 @@
 			background: url( #{"{{'productsGreenPaperTextureMobile.png' | asset_url }}"} ) center center no-repeat;
 
 			h4 {
-				margin-bottom: 20%;
+				margin-bottom: 8%;
 				letter-spacing: -0.64px;
 				line-height: 40px;
 			}
@@ -717,7 +712,7 @@
 
 			&Headings {
 				margin-top: 15%;
-				width: 140px;;
+				width: 65%;
 			}
 
 			&-img {
@@ -732,6 +727,17 @@
 
 			&-imgMobile {
 				display: block;
+			}
+		}
+
+		@include bp(480) {
+
+			h4 {
+				margin-bottom: 20%;
+			}
+
+			&Headings {
+				width: 140px;;
 			}
 		}
 

@@ -84,12 +84,13 @@ var weloApp = function($){
 
 		// parallax
 		$(window).scroll(function() {
-			var iphone5bp = 320
+			var desktop = 1280
 			var tablet = 768
 			var mobile = 580
+			var iphone5bp = 320
 
 			//homepage
-			if ($('.learnAboutProbioticsLink').length && window.innerWidth > iphone5bp) {
+			if ($('.learnAboutProbioticsLink').length && window.innerWidth > desktop) {
 				$('.learnAboutProbioticsLink').each(function(i,el) {
 					var parentOffset = $(el).parents('.soWeDidContainer').offset().top;
 					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/25;
@@ -97,10 +98,18 @@ var weloApp = function($){
 				});
 			}
 
-			if ($('.sectionContent2, .sectionContent3').length && window.innerWidth > mobile) {
-				$('.sectionContent2, .sectionContent3').each(function(i,el) {
+			if ($('.sectionContent2').length && window.innerWidth > mobile) {
+				$('.sectionContent2').each(function(i,el) {
 					var parentOffset = $(el).parents('section').offset().top;
 					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.sectionContent3').length && window.innerWidth > mobile) {
+				$('.sectionContent3').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top+125)/3;
 					$(el).css({'margin-top': yPos});
 				});
 			}
@@ -207,10 +216,19 @@ var weloApp = function($){
 				});
 			}
 
-			if ($('.section5Content').length && window.innerWidth > iphone5bp) {
+			// right to the gut
+			if ($('.section5Content').length && window.innerWidth >= tablet) {
 				$('.section5Content').each(function(i,el) {
 					var parentOffset = $(el).parents('section').offset().top;
 					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/2;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
+			if ($('.section5Content').length && window.innerWidth < tablet && window.innerWidth > iphone5bp) {
+				$('.section5Content').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/6;
 					$(el).css({'margin-top': yPos});
 				});
 			}

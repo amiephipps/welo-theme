@@ -12,9 +12,14 @@
 			right: 4%;
 			margin-bottom: 4%;
 		}
-		
-		@include bp(768) {
+
+		@include bp(1280) {
 			height: 450px;
+			
+			h2 {
+				@include fontSize(87);
+				line-height: 73px;
+			}
 		}
 
 		@include bp(580) {
@@ -39,7 +44,7 @@
 			left: 50%;
 			transform: translateX(-40%);
 
-			@include bp(768) {
+			@include bp(1280) {
 				display: none;
 			}
 		}
@@ -47,12 +52,16 @@
 		.products2Tablet {
 			display: none;
 
-			@include bp(768) {
+			@include bp(1280) {
 				position: absolute;
 				display: block;
-				width: 56%;
+				width: 40%;
 				bottom: 0;
 				right: 0;
+			}
+
+			@include bp(768) {
+				width: 56%;
 			}
 
 			@include bp(580) {
@@ -71,7 +80,7 @@
 			}
 		}
 
-		@include bp(768) {
+		@include bp(1280) {
 			height: 480px;
 			background-position: -105px center;
 
@@ -111,7 +120,7 @@
 			top: 15px;
 		}
 
-		@include bp(768) {
+		@include bp(1280) {
 			background-position: -30px center;
 
 			.sectionContent3 {
@@ -163,7 +172,7 @@
 		@extend .relative;
 		z-index: 1;
 
-		@include bp(768) {
+		@include bp(1280) {
 			margin: 0;
 
 			&-section3 {
@@ -182,17 +191,18 @@
 
 	.weWantedToMakeContainer {
 		width: 300px;
-		line-height: 79.68px;
 
 		h4 {
 			font-family: $secondaryHeadingFont, sans-serif;
-			/* We Wanted to make a: */
-			// font-family: Populaire;
-			// font-size: 90.23px;
-			// color: #B7DEBF;
-			// letter-spacing: 1.64px;
 			line-height: 79.68px;
-			// line-height: normal;
+		}
+
+		.superJuice:first-of-type {
+			line-height: 75.12;
+		}
+
+		.superJuice:nth-of-type(2) {
+			line-height: 87.36px;
 		}
 
 		h1,
@@ -222,7 +232,7 @@
 			letter-spacing: -1;
 		}
 
-		@include bp(768) {
+		@include bp(1280) {
 			width: 200px;
 
 			&-section3 {
@@ -260,7 +270,7 @@
 
 	.soWeDidContainer {
 
-		@include bp(768) {
+		@include bp(1280) {
 
 			&-section2 {
 				display: flex;
@@ -288,7 +298,7 @@
 			}
 		}
 
-		@include bp(768) {
+		@include bp(1280) {
 			width: 200px;
 		}
 
@@ -311,7 +321,7 @@
 		display: block;
 		@extend .relative;
 
-		@include bp(768) {
+		@include bp(1280) {
 			width: 185px;
 
 			&-section2 {
