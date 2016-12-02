@@ -90,18 +90,13 @@ var weloApp = function($){
 			var iphone5bp = 320
 
 			//homepage
-			if ($('.learnAboutProbioticsLink').length && window.innerWidth > desktop) {
-				$('.learnAboutProbioticsLink').each(function(i,el) {
-					var parentOffset = $(el).parents('.soWeDidContainer').offset().top;
-					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/25;
-					$(el).css({'margin-top': yPos});
-				});
-			}
 
 			if ($('.sectionContent2').length && window.innerWidth > desktop) {
 				$('.sectionContent2').each(function(i,el) {
+					var scrolled = $(window).scrollTop()
 					var parentOffset = $(el).parents('section').offset().top;
-					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)-275/2;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)-500/15;
+					// var yPos = -(scrolled * 0.4)
 					$(el).css({'margin-top': yPos});
 				});
 			}
@@ -114,6 +109,14 @@ var weloApp = function($){
 				});
 			}
 
+			if ($('.sectionContent2').length && window.innerWidth <= mobile) {
+				$('.sectionContent2').each(function(i,el) {
+					var parentOffset = $(el).parents('section').offset().top;
+					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/5;
+					$(el).css({'margin-top': yPos});
+				});
+			}
+
 			if ($('.sectionContent3').length && window.innerWidth > mobile) {
 				$('.sectionContent3').each(function(i,el) {
 					var parentOffset = $(el).parents('section').offset().top;
@@ -122,13 +125,6 @@ var weloApp = function($){
 				});
 			}
 
-			if ($('.sectionContent2').length && window.innerWidth <= mobile) {
-				$('.sectionContent2').each(function(i,el) {
-					var parentOffset = $(el).parents('section').offset().top;
-					var yPos = -($(window).scrollTop()-parentOffset+$(el).position().top)/5;
-					$(el).css({'margin-top': yPos});
-				});
-			}
 
 			if ($('.sectionContent3').length && window.innerWidth <= mobile) {
 				$('.sectionContent3').each(function(i,el) {

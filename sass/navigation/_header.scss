@@ -23,7 +23,6 @@
 	}
 }
 
-
 // desktop nav
 .desktopNav {
 	.item {
@@ -32,9 +31,10 @@
 		letter-spacing: 1px;
 
 		a {
+			font-family: $bodyFontBold;
 			padding-right: 15px;
-			font-weight: bold;
 		}
+		
 		&:not(:first-of-type) {
 			a {
 				padding-left: 15px;

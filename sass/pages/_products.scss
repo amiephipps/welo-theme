@@ -145,6 +145,8 @@
 
 		.section2-3 {
 			margin: 0px 0px 70px;
+			position: relative;
+			z-index: 1;
 
 			&-mobile {
 				display: none;
@@ -403,73 +405,10 @@
 		}
 	}
 
-	// .section3-2 {
-	// 	@extend .flexParent;
-	// 	flex-wrap: nowrap;
-
-	// }
-
-	// .section3-2-1 {
-
-	// 	&-mobile {
-	// 		display: none;
-	// 	}
-
-	// 	img {
-	// 		width: 228px;
-	// 		height: 458px;
-	// 	}
-	// }
-
-	// .section3-2-2 {
-	// 	@extend .relative;
-	// 	max-width: 500px;
-	// 	margin-top: 20px;
-	// 	margin-left: 20px;
-
-	// 	h6 {
-	// 		font-family: $bodyFontBold;
-	// 		text-transform: none;
-	// 		font-size: 1.8vw;
-	// 		text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
-	// 	}
-
-	// 	h6:nth-of-type(2),
-	// 	h6:nth-of-type(3) {
-	// 		margin-top: 60px;
-	// 	}
-
-	// 	h6:nth-of-type(4) {
-	// 		margin-top: 40px;
-	// 	}
-
-	// 	p {
-	// 		@extend .absolute;
-	// 		bottom: -50px;
-
-	// 		a {
-	// 			color: $white;
-	// 		}
-	// 	}
-
-	// 	@include bp(768) {
-
-	// 		.section3-2-1 {
-
-	// 			&-mobile {
-	// 				display: block;
-	// 			}
-
-	// 			&-desktop {
-	// 				display: none;
-	// 			}
-	// 		}
-	// 	}
-	// }
-
 	.section4 {
 		@extend .relative;
-		background: $lightGreen;
+		background: url( #{"{{'products-section3.jpg' | asset_url }}"} ) center center no-repeat;
+		background-size: cover;
 
 		.section4Content {
 			padding: 5% 0;
@@ -524,28 +463,32 @@
 			.rightArrow {
 				background: #d7ed96 url(//cdn.shopify.com/s/files/1/1557/5885/t/3/assets/purpleRightArrow.png?16404003058298160106) center center no-repeat;
 				position: absolute;
-				right: 42px;
-				top: 70px;
+				right: 40px;
+				top: 69px;
 				padding: 10px;
 				width: 55px;
-				height: 41px;
+				height: 43px;
 				border: none;
 				cursor: pointer;
 			}
 
 			div#mce-success-response.response,
 			div#mce-error-response.response {
-				padding-top: 4px;
+				padding-top: 10px;
 				margin: 0;
 				width: 100%;
-				@include fontSize(12);
+				@include fontSize(14);
+			}
+
+			#mc_embed_signup input.mce_inline_error {
+				border: none;
 			}
 
 			#mc_embed_signup div.mce_inline_error {
 				color: $white;
 				background: none;
-				@include fontSize(12);
-				padding: 4px 0 0;
+				@include fontSize(14);
+				padding: 10px 0 0;
 				margin: 0;
 			}
 
@@ -568,6 +511,8 @@
 		}
 
 		@include bp(768) {
+			background-position: 0px;
+
 			.section4Content {
 				width: 60%;
 			}
@@ -587,8 +532,8 @@
 				padding: 20px;
 
 				.rightArrow {
-					top: 46px;
-					right: 22px;
+					top: 45px;
+					right: 20px;
 				}
 			}
 		}
