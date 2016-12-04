@@ -228,9 +228,9 @@
 		@extend .relative;
 		width: 30%;
 
-		&:nth-of-type(2) {
-			align-self: flex-start;
-		}
+		// &:nth-of-type(2) {
+		// 	align-self: flex-start;
+		// }
 
 		p:last-of-type {
 			color: $darkGrey;
@@ -249,6 +249,10 @@
 		@include bp(768) {
 			width: 70%;
 			margin-top: -40px;
+
+			&:nth-of-type(2) {
+				align-self: flex-end;
+			}
 
 			&:first-of-type,
 			&:nth-of-type(3) {
@@ -305,11 +309,12 @@
 	   @include bp(768) {
 	   	word-spacing: unset;
 	   	white-space: nowrap;
-	   	top: 150px;
+	   	top: 140px;
 	   }
 
 	   @include bp(768) {
 	   	white-space: initial;
+	   	top: 110px;
 
 	   	&:nth-of-type(1),
 	   	&:nth-of-type(3) {

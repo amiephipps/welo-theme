@@ -85,10 +85,10 @@
 			background-position: -105px center;
 
 			.sectionContent2 {
-				margin-top: 8%;
+				// margin-top: 8%;
 				flex-direction: column;
 				align-items: initial;
-				justify-content: initial
+				justify-content: center;
 			}
 		}
 
@@ -167,8 +167,8 @@
 
 	.weWantedToMakeContainer,
 	.soWeDidContainer {
-		margin-top: 5%;
-		margin-bottom: 3%;
+		// margin-top: 5%;
+		// margin-bottom: 3%;
 		@extend .relative;
 		z-index: 1;
 
