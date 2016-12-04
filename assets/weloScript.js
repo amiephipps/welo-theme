@@ -33,7 +33,18 @@ var loadScript = function(url, callback){
 var weloApp = function($){
 
 	$(document).ready(function() {
-		var s = skrollr.init({forceHeight: false});
+		
+		var tablet = 768
+		if (window.innerWidth > tablet) {
+			var s = skrollr.init({forceHeight: false});
+		} 
+
+		$(window).resize(function(event) {
+			var tablet = 768
+			if (window.innerWidth > tablet) {
+				skrollr.init().destroy()
+			} 
+		})
 
 		// handle mobile nav 
 		$('.mobileNavIcon').click(function(){

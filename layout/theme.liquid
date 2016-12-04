@@ -57,7 +57,9 @@
 {% comment %}<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >{% endcomment %}
 <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 
-    <header class="row wrapper relative">
+    <div id="skrollr-body">
+
+    <header class="wrapper relative">
 
       {% comment %}
         Show and h1 tag and hide it for SEO
@@ -105,9 +107,10 @@
 	    </div>   
 
     </footer>
+  </div>
     
   {{ 'shop.js'  | asset_url | script_tag }}
   {{ 'skrollr.min.js' | asset_url | script_tag }}
-
+  
 </body>
 </html>

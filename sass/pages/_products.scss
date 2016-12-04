@@ -19,9 +19,13 @@
 
 		@include bp(768) {
 			height: 440px;
+			background: url( #{"{{'products-section1-tablet.png' | asset_url }}"} ) center center no-repeat;
+			background-size: cover;
 		}
 
 		@include bp(580) {
+			background: url( #{"{{'products-section1-mobile.png' | asset_url }}"} ) center center no-repeat;
+			background-size: cover;
 			height: 360px;
 		}
 
@@ -511,7 +515,7 @@
 		}
 
 		@include bp(768) {
-			background-position: 0px;
+			background-position: -25px;
 
 			.section4Content {
 				width: 60%;

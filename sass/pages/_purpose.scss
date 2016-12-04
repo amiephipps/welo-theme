@@ -29,6 +29,8 @@
 
 		@include bp(768) {
 			height: 700px;
+			background: url( #{"{{'purpose-section1-tablet.png' | asset_url }}"} ) center center no-repeat;
+			background-size: cover;
 
 			h5 {
 				@include fontSize(62.5);
@@ -51,6 +53,8 @@
 
 		@include bp(580) {
 			height: 625px;
+			background: url( #{"{{'purpose-section1-mobile.png' | asset_url }}"} ) center center no-repeat;
+			background-size: cover;
 
 			h5 {
 				@include fontSize(44);
@@ -158,6 +162,7 @@
 		}
 
 		@include bp(580) {
+			background-position: -650px;
 			height: 650px;
 
 			li {
@@ -197,6 +202,14 @@
 			.meetTheFounders {
 				@include fontSize(67);
 				letter-spacing: -0.93px;
+				float: right;
+				width: 550px;
+				text-align: right;
+				margin-bottom: 5%;
+			}
+
+			.founders {
+				clear: both;
 			}
 		}
 
@@ -207,6 +220,9 @@
 			.meetTheFounders {
 				@include fontSize(50);
 				letter-spacing: -0.7px;
+				float: initial;
+				text-align: left;
+				width: 320px;
 			}
 		}
 	}
@@ -252,13 +268,17 @@
 
 			&:nth-of-type(2) {
 				align-self: flex-end;
+
+				.founderName {
+					right: 165px;
+				}
 			}
 
 			&:first-of-type,
 			&:nth-of-type(3) {
 
 				.founderName {
-					right: 0;
+					left: 165px;
 				}
 
 				.founderImage {
@@ -284,12 +304,20 @@
 				.founderImage {
 					margin-left: -50px;
 				}
+
+				.founderName {
+					left: 65px;
+				}
 			}
 
 			&:nth-of-type(2) {
 
 				.founderImage {
 					margin-right: -50px;
+				}
+
+				.founderName {
+					right: 65px;
 				}
 			}
 		}
@@ -312,7 +340,7 @@
 	   	top: 140px;
 	   }
 
-	   @include bp(768) {
+	   @include bp(580) {
 	   	white-space: initial;
 	   	top: 110px;
 

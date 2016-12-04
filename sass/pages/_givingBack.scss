@@ -2,7 +2,7 @@
 	overflow: hidden;
 
 	.section1 {
-		background: url( #{"{{ 'givingback-section1.jpg' | asset_url }}"} ) center center no-repeat;
+		background: url( #{"{{ 'givingback-section1.png' | asset_url }}"} ) center center no-repeat;
 		background-size: cover;
 		height: 710px;
 
@@ -30,6 +30,8 @@
 
 		@include bp(768) {
 			height: 480px;
+			background: url( #{"{{ 'givingback-section1-tablet.png' | asset_url }}"} ) center center no-repeat;
+			background-size: cover;
 
 			div {
 				height: 100%;
@@ -44,6 +46,8 @@
 
 		@include bp(580) {
 			height: 480px;
+			background: url( #{"{{ 'givingback-section1-mobile.png' | asset_url }}"} ) center center no-repeat;
+			background-size: cover;
 
 			div {
 				height: 100%;
